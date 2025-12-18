@@ -14,6 +14,7 @@ export default function Header() {
         ;(el as HTMLElement).tabIndex = -1
         ;(el as HTMLElement).focus({ preventScroll: true } as FocusOptions)
       } catch (e) {
+        console.log(e)
         // fallback: focus after a short delay if direct focus isn't supported
         setTimeout(() => {
           try {
