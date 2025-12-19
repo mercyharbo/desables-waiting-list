@@ -135,3 +135,39 @@
     @apply bg-background text-foreground;
   }
 }
+
+/* Marquee styles */
+.marquee {
+  overflow: hidden;
+  display: inline-block;
+  vertical-align: middle;
+  max-width: 100%;
+}
+.marquee__track {
+  display: inline-block;
+  white-space: nowrap;
+  will-change: transform;
+  animation: marquee var(--marquee-duration, 10s) linear infinite;
+}
+.marquee__item {
+  display: inline-block;
+  padding-right: 2rem;
+}
+.marquee__copy {
+  padding-left: 2rem;
+}
+@keyframes marquee {
+  from {
+    transform: translateX(0%);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+/* Respect users who prefer reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .marquee__track {
+    animation: none;
+  }
+}

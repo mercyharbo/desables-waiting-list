@@ -4,6 +4,7 @@ import Header from '@/components/header'
 import { Button } from '@/components/ui/button'
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
 import { Input } from '@/components/ui/input'
+import Marquee from '@/components/ui/marquee'
 import { AnimatePresence, motion } from 'framer-motion'
 import {
   ChevronDown,
@@ -78,20 +79,18 @@ export default function Home() {
         >
           <div className='mx-auto max-w-5xl text-center space-y-8'>
             {/* Decorative badge */}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5 }}
-              className='inline-flex items-center gap-2 px-6 py-3 rounded-full border-2 border-primary/20 bg-primary/5 backdrop-blur-sm'
-            >
-              <span className='relative flex h-2 w-2'>
-                <span className='animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75'></span>
-                <span className='relative inline-flex rounded-full h-2 w-2 bg-primary'></span>
-              </span>
-              <span className='text-sm font-semibold text-primary'>
-                Now accepting early access applications
-              </span>
-            </motion.div>
+            <Marquee>
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5 }}
+                className='inline-flex items-center gap-2 px-6 py-3 rounded-full border-2 border-primary/20 bg-primary/5 backdrop-blur-sm'
+              >
+                <span className='text-sm font-semibold text-primary'>
+                  Now accepting early access applications
+                </span>
+              </motion.div>
+            </Marquee>
 
             {/* Main heading with gradient */}
             <motion.h1
@@ -166,30 +165,16 @@ export default function Home() {
               className='pt-12 flex flex-wrap items-center justify-center gap-8 text-sm text-muted-foreground'
             >
               <div className='flex items-center gap-2'>
-                <div className='flex -space-x-2'>
-                  <Image
-                    src='/wait-img (1).jpeg'
-                    alt='Waitlist member'
-                    width={32}
-                    height={32}
-                    className='size-8 rounded-full border-2 border-background object-cover'
-                  />
-                  <Image
-                    src='/wait-img (2).jpeg'
-                    alt='Waitlist member'
-                    width={32}
-                    height={32}
-                    className='size-8 rounded-full border-2 border-background object-cover'
-                  />
-                  <Image
-                    src='/wait-img (3).jpeg'
-                    alt='Waitlist member'
-                    width={32}
-                    height={32}
-                    className='size-8 rounded-full border-2 border-background object-cover'
-                  />
-                </div>
-                <span className='font-medium'>Join 500+ on the waitlist</span>
+                <Heart className='size-4 text-primary fill-primary' />
+                <span className='font-medium'>
+                  Built with accessibility first
+                </span>
+              </div>
+              <div className='flex items-center gap-2'>
+                <Heart className='size-4 text-primary fill-primary' />
+                <span className='font-medium'>
+                  Built with accessibility first
+                </span>
               </div>
               <div className='flex items-center gap-2'>
                 <Heart className='size-4 text-primary fill-primary' />
@@ -225,7 +210,7 @@ export default function Home() {
             className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'
           >
             <motion.div variants={fadeInUp} className='md:col-span-1'>
-              <Card className='group hover:shadow-xl hover:-translate-y-3 w-full transition-all duration-300 border-2 hover:border-primary/20 h-full'>
+              <Card className='group shadow-none hover:scale-105 w-full transition-all duration-300 border-2 hover:border-primary/20 h-full'>
                 <CardHeader className='flex flex-col gap-4'>
                   <motion.div
                     whileHover={{ scale: 1.1, rotate: 5 }}
@@ -249,7 +234,7 @@ export default function Home() {
             </motion.div>
 
             <motion.div variants={fadeInUp} className='md:col-span-1'>
-              <Card className='group hover:shadow-xl hover:-translate-y-3 transition-all duration-300 border-2 hover:border-primary/20 h-full'>
+              <Card className='group shadow-none hover:scale-105 transition-all duration-300 border-2 hover:border-primary/20 h-full'>
                 <CardHeader className='flex flex-col gap-4'>
                   <motion.div
                     whileHover={{ scale: 1.1, rotate: 5 }}
@@ -274,7 +259,7 @@ export default function Home() {
               variants={fadeInUp}
               className='md:col-span-2 lg:col-span-1'
             >
-              <Card className='group hover:shadow-xl hover:-translate-y-3 transition-all duration-300 border-2 hover:border-primary/20 h-full'>
+              <Card className='group shadow-none hover:scale-105 transition-all duration-300 border-2 hover:border-primary/20 h-full'>
                 <CardHeader className='flex flex-col gap-4'>
                   <motion.div
                     whileHover={{ scale: 1.1, rotate: 5 }}
