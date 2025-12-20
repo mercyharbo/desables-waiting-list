@@ -2,11 +2,42 @@
 @import 'tw-animate-css';
 @import 'tailwind-scrollbar-hide/v4';
 
+/* Schibsted Grotesk (self-host):
+   Place your licensed WOFF2 font files in /public/fonts/ e.g.
+   - /public/fonts/SchibstedGrotesk-Regular.woff2
+   - /public/fonts/SchibstedGrotesk-Medium.woff2
+   - /public/fonts/SchibstedGrotesk-SemiBold.woff2
+   Then keep these @font-face declarations. If you load the font from
+   a licensed provider, remove these and load via their recommended method. */
+@font-face {
+  font-family: 'Schibsted Grotesk';
+  src: url('/fonts/SchibstedGrotesk-Regular.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Schibsted Grotesk';
+  src: url('/fonts/SchibstedGrotesk-Medium.woff2') format('woff2');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Schibsted Grotesk';
+  src: url('/fonts/SchibstedGrotesk-SemiBold.woff2') format('woff2');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+/* End Schibsted Grotesk */
+
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  /* Use the Cabinet Grotesk variable provided by next/font/local. If the font files are not present, fall back to the system sans stack. */
-  --font-sans: var(--font-cabinet);
+  /* Use Schibsted Grotesk as the primary UI font. Self-host WOFF2 files in /public/fonts or load via your licensed provider. */
+  --font-sans: 'Schibsted Grotesk', ui-sans-serif, system-ui, -apple-system,
+    'Segoe UI', Roboto, 'Helvetica Neue', Arial;
   --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, 'Roboto Mono',
     'Segoe UI Mono', 'Helvetica Neue', monospace;
   --color-sidebar-ring: var(--sidebar-ring);
@@ -45,6 +76,7 @@
   --radius-2xl: calc(var(--radius) + 8px);
   --radius-3xl: calc(var(--radius) + 12px);
   --radius-4xl: calc(var(--radius) + 16px);
+  --color-light-dark: var(--light-dark);
 }
 
 @layer base {
@@ -53,8 +85,7 @@
   }
   body {
     @apply bg-background text-foreground;
-    font-family: var(--font-sans), ui-sans-serif, system-ui, -apple-system,
-      'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+    font-family: var(--font-sans), system-ui, -apple-system, 'Segoe UI';
   }
 }
 
@@ -66,7 +97,7 @@
   --card-foreground: oklch(0.145 0 0);
   --popover: oklch(1 0 0);
   --popover-foreground: oklch(0.145 0 0);
-  --primary: #055238;
+  --primary: #adf9de;
   --primary-foreground: oklch(0.985 0 0);
   --secondary: oklch(0.97 0 0);
   --secondary-foreground: oklch(0.205 0 0);
@@ -91,6 +122,8 @@
   --sidebar-accent-foreground: oklch(0.205 0 0);
   --sidebar-border: oklch(0.922 0 0);
   --sidebar-ring: oklch(0.708 0 0);
+
+  --light-dark: #262626;
 }
 
 .dark {
@@ -133,6 +166,8 @@
   }
   body {
     @apply bg-background text-foreground;
+    font-family: 'Schibsted Grotesk', ui-sans-serif, system-ui, -apple-system,
+      'Segoe UI', Roboto, 'Helvetica Neue', Arial;
   }
 }
 

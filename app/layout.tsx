@@ -1,9 +1,11 @@
+import FooterComp from '@/components/footer'
+import Header from '@/components/header'
 import type { Metadata } from 'next'
-import { Space_Grotesk } from 'next/font/google'
+import { Schibsted_Grotesk } from 'next/font/google'
 import './globals.css'
 
-// Using Space Grotesk as a free alternative to Cabinet Grotesk (similar geometric sans-serif)
-const spaceGrotesk = Space_Grotesk({
+// Using Schibsted Grotesk as a free alternative to Cabinet Grotesk (similar geometric sans-serif)
+const SchibstedGrotesk = Schibsted_Grotesk({
   subsets: ['latin'],
   variable: '--font-cabinet',
   display: 'swap',
@@ -64,7 +66,13 @@ export default function RootLayout({
 }>) {
   return (
     <html lang='en'>
-      <body className={`${spaceGrotesk.variable} antialiased`}>{children}</body>
+      <body
+        className={`${SchibstedGrotesk.variable} space-y-5 antialiased bg-[#19181F]`}
+      >
+        <Header />
+        {children}
+        <FooterComp />
+      </body>
     </html>
   )
 }

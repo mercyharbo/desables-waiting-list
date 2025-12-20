@@ -21,9 +21,10 @@ export default function Marquee({
       <span
         className='marquee__track'
         style={
-          {
-            ['--marquee-duration' as any]: `${duration}s`,
-          } as React.CSSProperties
+          ((): React.CSSProperties => {
+            const s: Record<string, string> = { '--marquee-duration': `${duration}s` }
+            return s as unknown as React.CSSProperties
+          })()
         }
         aria-hidden='true'
       >
