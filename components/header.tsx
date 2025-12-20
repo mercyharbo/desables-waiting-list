@@ -30,7 +30,7 @@ export default function Header() {
       <nav aria-label='Primary' className='flex items-center gap-4'>
         <Button
           onClick={() => setDialogOpen(true)}
-          className='h-11 rounded-3xl text-black px-4 transition-colors'
+          className='h-11 rounded-3xl text-white bg-primary-dark hover:bg-primary-dark/90 px-4 transition-colors'
         >
           Get early access
         </Button>

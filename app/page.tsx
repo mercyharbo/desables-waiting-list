@@ -99,16 +99,9 @@ export default function Home() {
         <div className='mx-auto max-w-5xl text-center space-y-8'>
           {/* Decorative badge */}
           <Marquee>
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5 }}
-              className='inline-flex items-center gap-2 px-6 py-3 rounded-full border border-gray-700 bg-primary/5 backdrop-blur-sm'
-            >
-              <span className='text-sm font-semibold text-primary'>
-                Now accepting early access applications
-              </span>
-            </motion.div>
+            <span className='text-sm font-semibold uppercase text-primary'>
+              Now accepting early access applications
+            </span>
           </Marquee>
 
           {/* Main heading with gradient */}
@@ -158,7 +151,7 @@ export default function Home() {
                 <Button
                   size='lg'
                   variant='outline'
-                  className='rounded-full h-14 px-10 text-sm text-white font-semibold hover:bg-muted/5! hover:border-muted/20! hover:text-white transition-all'
+                  className='rounded-full h-14 px-10 text-sm text-white font-semibold hover:bg-muted/10! hover:border-muted/20! hover:text-white bg-muted/5! transition-all'
                 >
                   Science behind Desables
                 </Button>
@@ -174,19 +167,19 @@ export default function Home() {
             className='pt-12 flex flex-wrap items-center justify-center gap-8 text-sm text-muted-foreground'
           >
             <div className='flex items-center gap-2'>
-              <Heart className='size-4 text-primary fill-primary' />
+              <Heart className='size-4 text-primary-dark fill-primary-dark' />
               <span className='font-medium'>
                 Built with accessibility first
               </span>
             </div>
             <div className='flex items-center gap-2'>
-              <Heart className='size-4 text-primary fill-primary' />
+              <Heart className='size-4 text-primary-dark fill-primary-dark' />
               <span className='font-medium'>
                 Built with accessibility first
               </span>
             </div>
             <div className='flex items-center gap-2'>
-              <Heart className='size-4 text-primary fill-primary' />
+              <Heart className='size-4 text-primary-dark fill-primary-dark' />
               <span className='font-medium'>
                 Built with accessibility first
               </span>
@@ -195,7 +188,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className='space-y-10 py-16 lg:py-24 bg-primary'>
+      <section className='space-y-10 py-16 lg:py-24 bg-primary-dark'>
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -203,10 +196,10 @@ export default function Home() {
           transition={{ duration: 0.5 }}
           className='prose mx-auto w-full lg:max-w-4xl text-center space-y-3'
         >
-          <h2 className='text-4xl lg:text-5xl font-bold text-black'>
+          <h2 className='text-4xl lg:text-5xl font-bold text-white'>
             Why We Exist
           </h2>
-          <p className='text-lg lg:text-xl'>
+          <p className='text-lg lg:text-xl text-gray-300'>
             Inspiring Learners Begins With You— Join Desables
           </p>
         </motion.div>
@@ -330,7 +323,7 @@ export default function Home() {
                   <button
                     onClick={() => toggleFAQ(index)}
                     className={`w-full px-6 py-4 flex items-center justify-between text-left transition-colors ${
-                      openIndex === index ? '' : 'hover:bg-primary/5'
+                      openIndex === index ? '' : 'hover:bg-primary-dark/5'
                     }`}
                     aria-expanded={openIndex === index}
                   >

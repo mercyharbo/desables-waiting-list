@@ -77,6 +77,7 @@
   --radius-3xl: calc(var(--radius) + 12px);
   --radius-4xl: calc(var(--radius) + 16px);
   --color-light-dark: var(--light-dark);
+  --color-primary-dark: var(--primary-dark);
 }
 
 @layer base {
@@ -124,6 +125,7 @@
   --sidebar-ring: oklch(0.708 0 0);
 
   --light-dark: #262626;
+  --primary-dark: #065238;
 }
 
 .dark {

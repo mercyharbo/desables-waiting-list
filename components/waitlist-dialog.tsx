@@ -3,7 +3,6 @@
 import { Button } from '@/components/ui/button'
 import {
   Dialog,
-  DialogClose,
   DialogContent,
   DialogDescription,
   DialogFooter,
@@ -29,8 +28,7 @@ export default function WaitlistDialog({
   open,
   onOpenChange,
 }: WaitlistDialogProps) {
-  const [surname, setSurname] = useState('')
-  const [lastname, setLastname] = useState('')
+  const [name, setName] = useState('')
   const [email, setEmail] = useState('')
   const [referral, setReferral] = useState('')
   const [submitting, setSubmitting] = useState(false)
@@ -43,8 +41,7 @@ export default function WaitlistDialog({
       // Replace this with real submit logic (API call)
       await new Promise((r) => setTimeout(r, 700))
       setSubmitted(true)
-      setSurname('')
-      setLastname('')
+      setName('')
       setEmail('')
       setReferral('')
     } finally {
@@ -62,72 +59,128 @@ export default function WaitlistDialog({
           </DialogDescription>
         </DialogHeader>
 
-        <form onSubmit={handleSubmit} className='grid gap-4'>
-          <div className='grid grid-cols-1 sm:grid-cols-2 gap-4'>
-            <label className='flex flex-col space-y-2'>
-              <span className='text-sm'>Surname</span>
-              <Input
-                name='surname'
-                aria-label='Surname'
-                value={surname}
-                onChange={(e) => setSurname(e.target.value)}
-                required
-                className='border-muted/20 bg-muted/20! h-10'
-              />
-            </label>
+        <form onSubmit={handleSubmit} className='grid gap-5'>
+          <div className='relative'>
+            <Input
+              id='name'
+              aria-label='Full name'
+              placeholder=' '
+              value={name}
+              onChange={(e) => setName(e.target.value)}
+              required
+              className='peer border-muted bg-muted/5! h-12'
+            />
 
-            <label className='flex flex-col space-y-2'>
-              <span className='text-sm'>Lastname</span>
-              <Input
-                name='lastname'
-                aria-label='Lastname'
-                value={lastname}
-                onChange={(e) => setLastname(e.target.value)}
-                required
-                className='border-muted/20 bg-muted/20! h-10'
-              />
+            <label
+              htmlFor='name'
+              className='absolute left-3 top-1/2 -translate-y-1/2 text-sm text-gray-400 px-1 transition-all duration-200 pointer-events-none peer-placeholder-shown:top-1/2 peer-placeholder-shown:-translate-y-1/2 peer-placeholder-shown:text-sm peer-focus:-top-2 peer-focus:-translate-y-0 peer-focus:text-xs peer-focus:text-primary peer-focus:bg-black peer-[:not(:placeholder-shown)]:-top-2 peer-[:not(:placeholder-shown)]:-translate-y-0 peer-[:not(:placeholder-shown)]:text-xs peer-[:not(:placeholder-shown)]:text-primary peer-[:not(:placeholder-shown)]:bg-black'
+            >
+              Name
             </label>
           </div>
 
-          <label className='flex flex-col space-y-2'>
-            <span className='text-sm'>Email</span>
+          <div className='relative'>
             <Input
-              name='email'
+              id='email'
               aria-label='Email address'
+              placeholder=' '
               type='email'
               value={email}
               onChange={(e) => setEmail(e.target.value)}
               required
-              className='border-muted/20 bg-muted/20! h-10'
+              className='peer border-muted bg-muted/5! h-12'
             />
-          </label>
 
-          <label className='flex flex-col space-y-2'>
-            <span className='text-sm'>How did you hear about us?</span>
+            <label
+              htmlFor='email'
+              className='absolute left-3 top-1/2 -translate-y-1/2 text-sm text-gray-400 px-1 transition-all duration-200 pointer-events-none peer-placeholder-shown:top-1/2 peer-placeholder-shown:-translate-y-1/2 peer-placeholder-shown:text-sm peer-focus:-top-2 peer-focus:-translate-y-0 peer-focus:text-xs peer-focus:text-primary peer-focus:bg-black peer-[:not(:placeholder-shown)]:-top-2 peer-[:not(:placeholder-shown)]:-translate-y-0 peer-[:not(:placeholder-shown)]:text-xs peer-[:not(:placeholder-shown)]:text-primary peer-[:not(:placeholder-shown)]:bg-black'
+            >
+              Email address
+            </label>
+          </div>
+
+          <div className='flex flex-col space-y-3'>
+            <label htmlFor='about-us' className='text-sm'>
+              How did you hear about us?
+            </label>
             <Select value={referral} onValueChange={setReferral}>
               <SelectTrigger
-                size='md'
-                className='border-muted/20 bg-muted/20! w-full h-10'
+                size='xl'
+                className='border-muted bg-muted/5! w-full h-12'
               >
                 <SelectValue placeholder='Select an option' />
               </SelectTrigger>
-              <SelectContent>
-                <SelectItem value='social-media'>Social Media</SelectItem>
-                <SelectItem value='friend'>Friend</SelectItem>
-                <SelectItem value='search-engine'>Search Engine</SelectItem>
-                <SelectItem value='advertisement'>Advertisement</SelectItem>
-                <SelectItem value='other'>Other</SelectItem>
+              <SelectContent className='bg-light-dark text-white  border-muted/20!'>
+                <SelectItem
+                  value='twitter'
+                  className='hover:bg-primary-dark! hover:text-white!'
+                >
+                  Twitter
+                </SelectItem>
+                <SelectItem
+                  value='facebook'
+                  className='hover:bg-primary-dark! hover:text-white!'
+                >
+                  Facebook
+                </SelectItem>
+                <SelectItem
+                  value='instagram'
+                  className='hover:bg-primary-dark! hover:text-white!'
+                >
+                  Instagram
+                </SelectItem>
+                <SelectItem
+                  value='tiktok'
+                  className='hover:bg-primary-dark! hover:text-white!'
+                >
+                  TikTok
+                </SelectItem>
+                <SelectItem
+                  value='reddit'
+                  className='hover:bg-primary-dark! hover:text-white!'
+                >
+                  Reddit
+                </SelectItem>
+                <SelectItem
+                  value='friend'
+                  className='hover:bg-primary-dark! hover:text-white!'
+                >
+                  Friend
+                </SelectItem>
+                <SelectItem
+                  value='desables-member'
+                  className='hover:bg-primary-dark! hover:text-white!'
+                >
+                  Desables team member
+                </SelectItem>
+                <SelectItem
+                  value='google'
+                  className='hover:bg-primary-dark! hover:text-white!'
+                >
+                  Google search
+                </SelectItem>
+                <SelectItem
+                  value='ai-assistant'
+                  className='hover:bg-primary-dark! hover:text-white!'
+                >
+                  ChatGPT / Gemini
+                </SelectItem>
+                <SelectItem
+                  value='advertisement'
+                  className='hover:bg-primary-dark! hover:text-white!'
+                >
+                  Advertisement
+                </SelectItem>
               </SelectContent>
             </Select>
-          </label>
+          </div>
 
           <DialogFooter>
-            <DialogClose asChild>
-              <Button variant='outline' className='border-muted/20! border'>
-                Cancel
-              </Button>
-            </DialogClose>
-            <Button type='submit' disabled={submitting} className='text-black'>
+            <Button
+              type='submit'
+              disabled={submitting}
+              className='text-black px-5 h-12 w-full'
+            >
               {submitting ? 'Submitting…' : 'Join waitlist'}
             </Button>
           </DialogFooter>

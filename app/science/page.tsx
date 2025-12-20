@@ -16,6 +16,7 @@ import {
   Waves,
   Zap,
 } from 'lucide-react'
+import Image from 'next/image'
 
 const fadeInUp = {
   initial: { opacity: 0, y: 20 },
@@ -35,7 +36,7 @@ export default function page() {
   return (
     <main className='space-y-10 pt-16'>
       {/* Enhanced Hero Section */}
-      <section className='relative mx-auto max-w-5xl text-center px-6 py-28'>
+      <section className='relative mx-auto max-w-5xl text-center px-6 py-12'>
         {/* Decorative corner accents */}
         <div className='absolute top-0 left-0 w-20 h-20 border-l-4 border-t-4 border-primary rounded-tl-2xl' />
         <div className='absolute bottom-0 right-0 w-20 h-20 border-r-4 border-b-4 border-primary rounded-br-2xl' />
@@ -51,7 +52,7 @@ export default function page() {
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.5, delay: 0.2 }}
-            className='inline-flex items-center gap-2 px-4 py-2 border-2 border-primary rounded-full'
+            className='inline-flex items-center gap-2'
           >
             {/* <div className='size-2 bg-primary rounded-full animate-pulse' /> */}
             <span className='text-sm font-semibold text-primary'>
@@ -95,8 +96,199 @@ export default function page() {
           </motion.p>
         </motion.div>
       </section>
+
+      <section className='mx-auto max-w-7xl px-5 py-20'>
+        <motion.div
+          initial={{ opacity: 0, y: 40 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.7 }}
+          className='space-y-12'
+        >
+          {/* Section Header */}
+          <div className='text-center space-y-4'>
+            <div className='flex items-center justify-center gap-4'>
+              <div className='h-px w-12 bg-primary' />
+              <h2 className='text-3xl lg:text-4xl font-bold text-white'>
+                Our Story
+              </h2>
+              <div className='h-px w-12 bg-primary' />
+            </div>
+            <p className='text-xl text-primary font-semibold'>
+              Building accessibility into the architecture
+            </p>
+          </div>
+
+          {/* Story Content in Sections */}
+          <div className='space-y-10'>
+            {/* Opening Statement */}
+            <motion.div
+              initial={{ opacity: 0, x: -20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+              className='relative pl-6 border-l-4 border-primary-dark'
+            >
+              <p className='text-lg lg:text-xl text-white leading-relaxed'>
+                The internet gave us a door, but lots of people never got a key.
+                We started Desables after watching brilliant people stall—not
+                for lack of talent, but because the product didn&apos;t fit
+                them.
+              </p>
+            </motion.div>
+
+            {/* Grid of Key Points */}
+            <div className='grid lg:grid-cols-2 gap-8'>
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6, delay: 0.3 }}
+                className='space-y-4'
+              >
+                <div className='flex items-start gap-3'>
+                  <div className='size-2 bg-primary-dark rounded-full shrink-0 mt-2' />
+                  <div className='space-y-2'>
+                    <h3 className='text-white font-bold text-lg'>
+                      Co-Design, Not Retrofit
+                    </h3>
+                    <p className='text-gray-300 leading-relaxed'>
+                      From the first sketch to the final release, we co-design
+                      with disabled creators. Every course is shaped by lived
+                      experience, not retrofitted to tick a box.
+                    </p>
+                  </div>
+                </div>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6, delay: 0.4 }}
+                className='space-y-4'
+              >
+                <div className='flex items-start gap-3'>
+                  <div className='size-2 bg-primary-dark rounded-full shrink-0 mt-2' />
+                  <div className='space-y-2'>
+                    <h3 className='text-white font-bold text-lg'>
+                      Rigorous Standards
+                    </h3>
+                    <p className='text-gray-300 leading-relaxed'>
+                      Nothing goes live until it clears an accessibility gate
+                      aligned to WCAG 2.2 AA. Assessment is flexible but
+                      rigorous—we care about evidence, not watch-time.
+                    </p>
+                  </div>
+                </div>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6, delay: 0.5 }}
+                className='space-y-4'
+              >
+                <div className='flex items-start gap-3'>
+                  <div className='size-2 bg-primary-dark rounded-full shrink-0 mt-2' />
+                  <div className='space-y-2'>
+                    <h3 className='text-white font-bold text-lg'>
+                      Portable Credentials
+                    </h3>
+                    <p className='text-gray-300 leading-relaxed'>
+                      Learners leave with portable, verifiable credentials that
+                      travel beyond our walls, so opportunity doesn&apos;t end
+                      at the edge of the platform.
+                    </p>
+                  </div>
+                </div>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6, delay: 0.6 }}
+                className='space-y-4'
+              >
+                <div className='flex items-start gap-3'>
+                  <div className='size-2 bg-primary-dark rounded-full shrink-0 mt-2' />
+                  <div className='space-y-2'>
+                    <h3 className='text-white font-bold text-lg'>
+                      Human-Centered Learning
+                    </h3>
+                    <p className='text-gray-300 leading-relaxed'>
+                      Progress is steady, human, and shame-free. Pause without
+                      penalty, switch formats without friction, and try again
+                      without losing face.
+                    </p>
+                  </div>
+                </div>
+              </motion.div>
+            </div>
+
+            {/* Highlighted Box */}
+            <motion.div
+              initial={{ opacity: 0, scale: 0.95 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6, delay: 0.7 }}
+              className='relative bg-light-dark border-2 border-primary-dark/30 rounded-2xl p-8 lg:p-10'
+            >
+              <div className='absolute top-0 left-8 -translate-y-1/2'>
+                <div className='bg-primary-dark px-4 py-1 rounded-full'>
+                  <span className='text-white font-bold text-sm'>
+                    Our Philosophy
+                  </span>
+                </div>
+              </div>
+              <div className='space-y-6 pt-4'>
+                <p className='text-gray-300 leading-relaxed'>
+                  Feedback is supportive and specific; nudges are gentle and
+                  optional; wellbeing is designed in with quiet modes,
+                  motion-reduced celebrations, and sensible breaks. Community
+                  spaces are moderated with care, so encouragement outnumbers
+                  anxiety.
+                </p>
+                <p className='text-gray-300 leading-relaxed'>
+                  Our gamification is purposeful, not performative. We use
+                  quests that map to real skills, XP for evidence-based
+                  milestones, and streaks that never punish a missed day. Badges
+                  are earned by shipping work, not by clicking through videos.
+                </p>
+              </div>
+            </motion.div>
+
+            {/* Mission Statement */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6, delay: 0.8 }}
+              className='bg-primary-dark/10 border-l-4 border-primary-dark rounded-r-2xl p-6 lg:p-8 space-y-4'
+            >
+              <p className='text-white leading-relaxed text-lg'>
+                We registered as a{' '}
+                <span className='text-primary font-bold'>
+                  Community Interest Company
+                </span>{' '}
+                to anchor our mission: opening high-value digital skills to
+                people mainstream platforms overlook, and making those skills
+                count in real hiring.
+              </p>
+              <p className='text-gray-300 leading-relaxed italic'>
+                This isn&apos;t charity; it&apos;s better product. When the
+                product fits more people, more people finish, and more people
+                get hired. That&apos;s the point.
+              </p>
+            </motion.div>
+          </div>
+        </motion.div>
+      </section>
+
       {/* Enhanced Our Story/Promise Section */}
-      <section className='bg-primary py-20'>
+      <section className='bg-primary-dark py-20 space-y-20'>
         <div className='mx-auto max-w-7xl px-5'>
           <motion.div
             initial={{ opacity: 0, y: 40 }}
@@ -147,7 +339,7 @@ export default function page() {
                   transition={{ duration: 0.6, delay: 0.4 }}
                   className='grid sm:grid-cols-3 gap-6 lg:gap-8 pt-8'
                 >
-                  <div className='space-y-3 text-center'>
+                  <div className='space-y-3 text-center transform transition-transform duration-300 hover:scale-105'>
                     <div className='flex justify-center'>
                       <div className='size-12 bg-primary/20 rounded-full flex items-center justify-center border-2 border-primary'>
                         <div className='size-3 bg-primary rounded-full' />
@@ -161,7 +353,7 @@ export default function page() {
                     </p>
                   </div>
 
-                  <div className='space-y-3 text-center'>
+                  <div className='space-y-3 text-center transform transition-transform duration-300 hover:scale-105'>
                     <div className='flex justify-center'>
                       <div className='size-12 bg-primary/20 rounded-full flex items-center justify-center border-2 border-primary'>
                         <div className='size-3 bg-primary rounded-full' />
@@ -175,7 +367,7 @@ export default function page() {
                     </p>
                   </div>
 
-                  <div className='space-y-3 text-center'>
+                  <div className='space-y-3 text-center transform transition-transform duration-300 hover:scale-105'>
                     <div className='flex justify-center'>
                       <div className='size-12 bg-primary/20 rounded-full flex items-center justify-center border-2 border-primary'>
                         <div className='size-3 bg-primary rounded-full' />
@@ -200,11 +392,9 @@ export default function page() {
             </div>
           </motion.div>
         </div>
-      </section>
-      {/*who we serve section  */}
-      <section className='bg-primary py-20'>
+
         <div className='space-y-5 flex flex-col lg:flex-row lg:justify-start lg:items-start justify-center items-center mx-auto max-w-7xl'>
-          <h1 className='text-2xl lg:text-3xl font-medium text-black text-left pt-12'>
+          <h1 className='text-2xl lg:text-3xl font-medium text-white text-left pt-12'>
             Who We Serve
           </h1>
 
@@ -221,7 +411,7 @@ export default function page() {
               whileHover={{ rotate: 0, scale: 1.02 }}
               transition={{ rotate: { duration: 0.35, ease: 'easeInOut' } }}
             >
-              <Card className='group bg-black shadow-none hover:scale-105 w-full transition-all duration-300 border border-gray-300 hover:border-primary/20 h-full'>
+              <Card className='group bg-black shadow-none hover:scale-105 w-full transition-all duration-300 border border-muted/20! hover:border-primary/20 h-full'>
                 <CardHeader className='flex flex-col gap-4'>
                   <motion.div
                     whileHover={{ scale: 1.1, rotate: 1 }}
@@ -249,7 +439,7 @@ export default function page() {
               whileHover={{ rotate: 0, scale: 1.02 }}
               transition={{ rotate: { duration: 0.35, ease: 'easeInOut' } }}
             >
-              <Card className='group bg-black shadow-none hover:scale-105 w-full transition-all duration-300 border border-gray-300 hover:border-primary/20 h-full'>
+              <Card className='group bg-black shadow-none hover:scale-105 w-full transition-all duration-300 border border-muted/20! hover:border-primary/20 h-full'>
                 <CardHeader className='flex flex-col gap-4'>
                   <motion.div
                     whileHover={{ scale: 1.1, rotate: 2 }}
@@ -279,7 +469,7 @@ export default function page() {
               whileHover={{ rotate: 0, scale: 1.02 }}
               transition={{ rotate: { duration: 0.35, ease: 'easeInOut' } }}
             >
-              <Card className='group bg-black shadow-none hover:scale-105 w-full transition-all duration-300 border border-gray-300 hover:border-primary/20 h-full'>
+              <Card className='group bg-black shadow-none hover:scale-105 w-full transition-all duration-300 border border-muted/20! hover:border-primary/20 h-full'>
                 <CardHeader className='flex flex-col gap-4'>
                   <motion.div
                     whileHover={{ scale: 1.1, rotate: 5 }}
@@ -305,6 +495,7 @@ export default function page() {
           </motion.div>
         </div>
       </section>
+
       {/* Before and after section */}
       <section className='mx-auto max-w-7xl px-5'>
         <div className='mx-auto max-w-2xl flex justify-center flex-col items-center gap-5'>
@@ -316,12 +507,19 @@ export default function page() {
               transition={{ duration: 0.45 }}
               className='mx-auto'
             >
-              <TabsList className='h-11 w-40 bg-muted/20  mx-auto '>
+              <TabsList className='h-14 w-76 px-1.5 gap-3 bg-muted/20 rounded-4xl  mx-auto '>
                 <TabsTrigger value='before' className='text-white!'>
                   Before
                 </TabsTrigger>
                 <TabsTrigger value='after' className='text-white!'>
-                  After
+                  <Image
+                    src={'/Favicon-2.png'}
+                    width={100}
+                    height={50}
+                    alt='desables logo'
+                    className='size-3'
+                  />
+                  With Desables
                 </TabsTrigger>
               </TabsList>
             </motion.div>
@@ -508,196 +706,6 @@ export default function page() {
           </Tabs>
         </div>
       </section>
-      {/* Enhanced Our Story Section */}
-      <section className='mx-auto max-w-7xl px-5 py-20'>
-        <motion.div
-          initial={{ opacity: 0, y: 40 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.7 }}
-          className='space-y-12'
-        >
-          {/* Section Header */}
-          <div className='text-center space-y-4'>
-            <div className='flex items-center justify-center gap-4'>
-              <div className='h-px w-12 bg-primary' />
-              <h2 className='text-3xl lg:text-4xl font-bold text-white'>
-                Our Story
-              </h2>
-              <div className='h-px w-12 bg-primary' />
-            </div>
-            <p className='text-xl text-primary font-semibold'>
-              Building accessibility into the architecture
-            </p>
-          </div>
-
-          {/* Story Content in Sections */}
-          <div className='space-y-10'>
-            {/* Opening Statement */}
-            <motion.div
-              initial={{ opacity: 0, x: -20 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: 0.2 }}
-              className='relative pl-6 border-l-4 border-primary'
-            >
-              <p className='text-lg lg:text-xl text-white leading-relaxed'>
-                The internet gave us a door, but lots of people never got a key.
-                We started Desables after watching brilliant people stall—not
-                for lack of talent, but because the product didn&apos;t fit
-                them.
-              </p>
-            </motion.div>
-
-            {/* Grid of Key Points */}
-            <div className='grid lg:grid-cols-2 gap-8'>
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.6, delay: 0.3 }}
-                className='space-y-4'
-              >
-                <div className='flex items-start gap-3'>
-                  <div className='size-2 bg-primary rounded-full shrink-0 mt-2' />
-                  <div className='space-y-2'>
-                    <h3 className='text-white font-bold text-lg'>
-                      Co-Design, Not Retrofit
-                    </h3>
-                    <p className='text-gray-300 leading-relaxed'>
-                      From the first sketch to the final release, we co-design
-                      with disabled creators. Every course is shaped by lived
-                      experience, not retrofitted to tick a box.
-                    </p>
-                  </div>
-                </div>
-              </motion.div>
-
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.6, delay: 0.4 }}
-                className='space-y-4'
-              >
-                <div className='flex items-start gap-3'>
-                  <div className='size-2 bg-primary rounded-full shrink-0 mt-2' />
-                  <div className='space-y-2'>
-                    <h3 className='text-white font-bold text-lg'>
-                      Rigorous Standards
-                    </h3>
-                    <p className='text-gray-300 leading-relaxed'>
-                      Nothing goes live until it clears an accessibility gate
-                      aligned to WCAG 2.2 AA. Assessment is flexible but
-                      rigorous—we care about evidence, not watch-time.
-                    </p>
-                  </div>
-                </div>
-              </motion.div>
-
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.6, delay: 0.5 }}
-                className='space-y-4'
-              >
-                <div className='flex items-start gap-3'>
-                  <div className='size-2 bg-primary rounded-full shrink-0 mt-2' />
-                  <div className='space-y-2'>
-                    <h3 className='text-white font-bold text-lg'>
-                      Portable Credentials
-                    </h3>
-                    <p className='text-gray-300 leading-relaxed'>
-                      Learners leave with portable, verifiable credentials that
-                      travel beyond our walls, so opportunity doesn&apos;t end
-                      at the edge of the platform.
-                    </p>
-                  </div>
-                </div>
-              </motion.div>
-
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.6, delay: 0.6 }}
-                className='space-y-4'
-              >
-                <div className='flex items-start gap-3'>
-                  <div className='size-2 bg-primary rounded-full shrink-0 mt-2' />
-                  <div className='space-y-2'>
-                    <h3 className='text-white font-bold text-lg'>
-                      Human-Centered Learning
-                    </h3>
-                    <p className='text-gray-300 leading-relaxed'>
-                      Progress is steady, human, and shame-free. Pause without
-                      penalty, switch formats without friction, and try again
-                      without losing face.
-                    </p>
-                  </div>
-                </div>
-              </motion.div>
-            </div>
-
-            {/* Highlighted Box */}
-            <motion.div
-              initial={{ opacity: 0, scale: 0.95 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: 0.7 }}
-              className='relative bg-light-dark border-2 border-primary/30 rounded-2xl p-8 lg:p-10'
-            >
-              <div className='absolute top-0 left-8 -translate-y-1/2'>
-                <div className='bg-primary px-4 py-1 rounded-full'>
-                  <span className='text-black font-bold text-sm'>
-                    Our Philosophy
-                  </span>
-                </div>
-              </div>
-              <div className='space-y-6 pt-4'>
-                <p className='text-gray-300 leading-relaxed'>
-                  Feedback is supportive and specific; nudges are gentle and
-                  optional; wellbeing is designed in with quiet modes,
-                  motion-reduced celebrations, and sensible breaks. Community
-                  spaces are moderated with care, so encouragement outnumbers
-                  anxiety.
-                </p>
-                <p className='text-gray-300 leading-relaxed'>
-                  Our gamification is purposeful, not performative. We use
-                  quests that map to real skills, XP for evidence-based
-                  milestones, and streaks that never punish a missed day. Badges
-                  are earned by shipping work, not by clicking through videos.
-                </p>
-              </div>
-            </motion.div>
-
-            {/* Mission Statement */}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: 0.8 }}
-              className='bg-primary/10 border-l-4 border-primary rounded-r-2xl p-6 lg:p-8 space-y-4'
-            >
-              <p className='text-white leading-relaxed text-lg'>
-                We registered as a{' '}
-                <span className='text-primary font-bold'>
-                  Community Interest Company
-                </span>{' '}
-                to anchor our mission: opening high-value digital skills to
-                people mainstream platforms overlook, and making those skills
-                count in real hiring.
-              </p>
-              <p className='text-gray-300 leading-relaxed italic'>
-                This isn&apos;t charity; it&apos;s better product. When the
-                product fits more people, more people finish, and more people
-                get hired. That&apos;s the point.
-              </p>
-            </motion.div>
-          </div>
-        </motion.div>
-      </section>{' '}
     </main>
   )
 }

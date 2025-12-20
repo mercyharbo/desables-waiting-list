@@ -9,7 +9,7 @@ export default function FooterComp() {
   const currentYear = new Date().getFullYear()
 
   return (
-    <footer className='w-full border-t'>
+    <footer className='w-full border-t border-muted/20'>
       <div className='mx-auto max-w-7xl px-6 py-12'>
         <div className='flex flex-col md:flex-row items-center justify-between gap-6'>
           <motion.div
