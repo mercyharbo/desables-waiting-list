@@ -497,8 +497,8 @@ export default function page() {
                         Daily improved efficiency
                       </h3>
                       <p className='text-sm text-pink-600'>
-                        Close each day with a &apos;done&apos; list instead of backlog
-                        guilt—small wins compound.
+                        Close each day with a &apos;done&apos; list instead of
+                        backlog guilt—small wins compound.
                       </p>
                     </CardContent>
                   </Card>
@@ -544,7 +544,8 @@ export default function page() {
               <p className='text-lg lg:text-xl text-white leading-relaxed'>
                 The internet gave us a door, but lots of people never got a key.
                 We started Desables after watching brilliant people stall—not
-                for lack of talent, but because the product didn&apos;t fit them.
+                for lack of talent, but because the product didn&apos;t fit
+                them.
               </p>
             </motion.div>
 
@@ -609,8 +610,8 @@ export default function page() {
                     </h3>
                     <p className='text-gray-300 leading-relaxed'>
                       Learners leave with portable, verifiable credentials that
-                      travel beyond our walls, so opportunity doesn&apos;t end at the
-                      edge of the platform.
+                      travel beyond our walls, so opportunity doesn&apos;t end
+                      at the edge of the platform.
                     </p>
                   </div>
                 </div>
@@ -689,9 +690,9 @@ export default function page() {
                 count in real hiring.
               </p>
               <p className='text-gray-300 leading-relaxed italic'>
-                This isn&apos;t charity; it&apos;s better product. When the product fits
-                more people, more people finish, and more people get hired.
-                That&apos;s the point.
+                This isn&apos;t charity; it&apos;s better product. When the
+                product fits more people, more people finish, and more people
+                get hired. That&apos;s the point.
               </p>
             </motion.div>
           </div>
