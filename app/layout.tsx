@@ -3,6 +3,7 @@ import Header from '@/components/header'
 import type { Metadata } from 'next'
 import { Schibsted_Grotesk } from 'next/font/google'
 import './globals.css'
+import { Providers } from './providers'
 
 // Using Schibsted Grotesk as a free alternative to Cabinet Grotesk (similar geometric sans-serif)
 const SchibstedGrotesk = Schibsted_Grotesk({
@@ -33,7 +34,7 @@ export const metadata: Metadata = {
     type: 'website',
     images: [
       {
-        url: '/Favicon-2.png',
+        url: '/asset/favicon.ico',
         width: 512,
         height: 512,
         alt: 'Desables logo',
@@ -45,12 +46,12 @@ export const metadata: Metadata = {
     title: 'Desables — Accessible learning for people with disabilities',
     description:
       'Inclusive courses, accessible resources and tools for learners with disabilities.',
-    images: ['/Favicon-2.png'],
+    images: ['/asset/favicon.ico'],
   },
   icons: {
-    icon: '/Favicon-2.png',
-    shortcut: '/Favicon-2.png',
-    apple: '/Favicon-2.png',
+    icon: '/asset/favicon.ico',
+    shortcut: '/asset/favicon.ico',
+    apple: '/asset/favicon.ico',
   },
   robots: {
     index: true,
@@ -66,12 +67,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang='en'>
-      <body
-        className={`${SchibstedGrotesk.variable} space-y-5 antialiased bg-[#19181F]`}
-      >
-        <Header />
-        {children}
-        <FooterComp />
+      <body className={`${SchibstedGrotesk.variable} space-y-5 antialiased`}>
+        <Providers>
+          <Header />
+          {children}
+          <FooterComp />
+        </Providers>
       </body>
     </html>
   )

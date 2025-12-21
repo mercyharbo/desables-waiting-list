@@ -64,7 +64,7 @@ export default function page() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.3 }}
-            className='text-4xl sm:text-5xl lg:text-6xl font-bold text-white leading-tight'
+            className='text-4xl sm:text-5xl lg:text-6xl font-bold text-black dark:text-white leading-tight'
           >
             About Desables
           </motion.h1>
@@ -87,7 +87,7 @@ export default function page() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.5 }}
-            className='text-lg lg:text-xl text-gray-300 leading-relaxed max-w-3xl mx-auto'
+            className='text-lg lg:text-xl dark:text-gray-300 text-gray-600 leading-relaxed max-w-3xl mx-auto'
           >
             Desables is an abilities-first learning platform for practical
             digital skills. We co-design with disabled creators, deliver
@@ -109,7 +109,7 @@ export default function page() {
           <div className='text-center space-y-4'>
             <div className='flex items-center justify-center gap-4'>
               <div className='h-px w-12 bg-primary' />
-              <h2 className='text-3xl lg:text-4xl font-bold text-white'>
+              <h2 className='text-3xl lg:text-4xl font-bold text-black dark:text-white'>
                 Our Story
               </h2>
               <div className='h-px w-12 bg-primary' />
@@ -127,9 +127,9 @@ export default function page() {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: 0.2 }}
-              className='relative pl-6 border-l-4 border-primary-dark'
+              className='relative pl-6 border-l-4 border-primary'
             >
-              <p className='text-lg lg:text-xl text-white leading-relaxed'>
+              <p className='text-lg lg:text-xl dark:text-white text-black leading-relaxed'>
                 The internet gave us a door, but lots of people never got a key.
                 We started Desables after watching brilliant people stall—not
                 for lack of talent, but because the product didn&apos;t fit
@@ -147,12 +147,12 @@ export default function page() {
                 className='space-y-4'
               >
                 <div className='flex items-start gap-3'>
-                  <div className='size-2 bg-primary-dark rounded-full shrink-0 mt-2' />
+                  <div className='size-2 bg-primary rounded-full shrink-0 mt-2' />
                   <div className='space-y-2'>
-                    <h3 className='text-white font-bold text-lg'>
+                    <h3 className='dark:text-white text-black font-bold text-lg'>
                       Co-Design, Not Retrofit
                     </h3>
-                    <p className='text-gray-300 leading-relaxed'>
+                    <p className='text-gray-600 dark:text-gray-300 leading-relaxed'>
                       From the first sketch to the final release, we co-design
                       with disabled creators. Every course is shaped by lived
                       experience, not retrofitted to tick a box.
@@ -169,12 +169,12 @@ export default function page() {
                 className='space-y-4'
               >
                 <div className='flex items-start gap-3'>
-                  <div className='size-2 bg-primary-dark rounded-full shrink-0 mt-2' />
+                  <div className='size-2 bg-primary rounded-full shrink-0 mt-2' />
                   <div className='space-y-2'>
-                    <h3 className='text-white font-bold text-lg'>
+                    <h3 className='dark:text-white text-black font-bold text-lg'>
                       Rigorous Standards
                     </h3>
-                    <p className='text-gray-300 leading-relaxed'>
+                    <p className='text-gray-600 dark:text-gray-300 leading-relaxed'>
                       Nothing goes live until it clears an accessibility gate
                       aligned to WCAG 2.2 AA. Assessment is flexible but
                       rigorous—we care about evidence, not watch-time.
@@ -191,12 +191,12 @@ export default function page() {
                 className='space-y-4'
               >
                 <div className='flex items-start gap-3'>
-                  <div className='size-2 bg-primary-dark rounded-full shrink-0 mt-2' />
+                  <div className='size-2 bg-primary rounded-full shrink-0 mt-2' />
                   <div className='space-y-2'>
-                    <h3 className='text-white font-bold text-lg'>
+                    <h3 className='dark:text-white text-black font-bold text-lg'>
                       Portable Credentials
                     </h3>
-                    <p className='text-gray-300 leading-relaxed'>
+                    <p className='text-gray-600 dark:text-gray-300 leading-relaxed'>
                       Learners leave with portable, verifiable credentials that
                       travel beyond our walls, so opportunity doesn&apos;t end
                       at the edge of the platform.
@@ -213,12 +213,12 @@ export default function page() {
                 className='space-y-4'
               >
                 <div className='flex items-start gap-3'>
-                  <div className='size-2 bg-primary-dark rounded-full shrink-0 mt-2' />
+                  <div className='size-2 bg-primary rounded-full shrink-0 mt-2' />
                   <div className='space-y-2'>
-                    <h3 className='text-white font-bold text-lg'>
+                    <h3 className='dark:text-white text-black font-bold text-lg'>
                       Human-Centered Learning
                     </h3>
-                    <p className='text-gray-300 leading-relaxed'>
+                    <p className='text-gray-600 dark:text-gray-300 leading-relaxed'>
                       Progress is steady, human, and shame-free. Pause without
                       penalty, switch formats without friction, and try again
                       without losing face.
@@ -234,24 +234,24 @@ export default function page() {
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: 0.7 }}
-              className='relative bg-light-dark border-2 border-primary-dark/30 rounded-2xl p-8 lg:p-10'
+              className='relative bg-primary/20 border-2 border-primary/30 rounded-2xl p-8 lg:p-10'
             >
               <div className='absolute top-0 left-8 -translate-y-1/2'>
-                <div className='bg-primary-dark px-4 py-1 rounded-full'>
-                  <span className='text-white font-bold text-sm'>
+                <div className='bg-primary px-4 py-1 rounded-full'>
+                  <span className='dark:text-black text-white font-bold text-sm'>
                     Our Philosophy
                   </span>
                 </div>
               </div>
               <div className='space-y-6 pt-4'>
-                <p className='text-gray-300 leading-relaxed'>
+                <p className='text-gray-800 dark:text-gray-300 leading-relaxed'>
                   Feedback is supportive and specific; nudges are gentle and
                   optional; wellbeing is designed in with quiet modes,
                   motion-reduced celebrations, and sensible breaks. Community
                   spaces are moderated with care, so encouragement outnumbers
                   anxiety.
                 </p>
-                <p className='text-gray-300 leading-relaxed'>
+                <p className='text-gray-800 dark:text-gray-300 leading-relaxed'>
                   Our gamification is purposeful, not performative. We use
                   quests that map to real skills, XP for evidence-based
                   milestones, and streaks that never punish a missed day. Badges
@@ -266,9 +266,9 @@ export default function page() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: 0.8 }}
-              className='bg-primary-dark/10 border-l-4 border-primary-dark rounded-r-2xl p-6 lg:p-8 space-y-4'
+              className='bg-primary/10 border-l-4 border-primary rounded-r-2xl p-6 lg:p-8 space-y-4'
             >
-              <p className='text-white leading-relaxed text-lg'>
+              <p className='dark:text-white text-black leading-relaxed text-lg'>
                 We registered as a{' '}
                 <span className='text-primary font-bold'>
                   Community Interest Company
@@ -277,7 +277,7 @@ export default function page() {
                 people mainstream platforms overlook, and making those skills
                 count in real hiring.
               </p>
-              <p className='text-gray-300 leading-relaxed italic'>
+              <p className='text-gray-600 dark:text-gray-300 leading-relaxed italic'>
                 This isn&apos;t charity; it&apos;s better product. When the
                 product fits more people, more people finish, and more people
                 get hired. That&apos;s the point.
@@ -288,7 +288,7 @@ export default function page() {
       </section>
 
       {/* Enhanced Our Story/Promise Section */}
-      <section className='bg-primary-dark py-20 space-y-20'>
+      <section className='bg-primary py-20 space-y-20'>
         <div className='mx-auto max-w-7xl px-5'>
           <motion.div
             initial={{ opacity: 0, y: 40 }}
@@ -309,7 +309,7 @@ export default function page() {
                     transition={{ duration: 0.5, delay: 0.2 }}
                     className='size-16 bg-primary rounded-2xl flex items-center justify-center rotate-12'
                   >
-                    <GraduationCap className='size-8 text-black -rotate-12' />
+                    <GraduationCap className='size-8 dark:text-black text-white -rotate-12' />
                   </motion.div>
                   <h2 className='text-3xl lg:text-4xl font-bold text-white'>
                     Our Promise to Learners
@@ -394,7 +394,7 @@ export default function page() {
         </div>
 
         <div className='space-y-5 flex flex-col lg:flex-row lg:justify-start lg:items-start justify-center items-center mx-auto max-w-7xl'>
-          <h1 className='text-2xl lg:text-3xl font-medium text-white text-left pt-12'>
+          <h1 className='text-2xl lg:text-3xl font-medium text-white dark:text-black text-left pt-12'>
             Who We Serve
           </h1>
 
@@ -416,7 +416,7 @@ export default function page() {
                   <motion.div
                     whileHover={{ scale: 1.1, rotate: 1 }}
                     transition={{ type: 'spring', stiffness: 300 }}
-                    className='bg-primary size-11 rounded-xl flex justify-center items-center text-black shadow-sm'
+                    className='bg-primary size-11 rounded-xl flex justify-center items-center dark:text-black text-white shadow-sm'
                   >
                     <GraduationCap className='size-6' />
                   </motion.div>
@@ -444,7 +444,7 @@ export default function page() {
                   <motion.div
                     whileHover={{ scale: 1.1, rotate: 2 }}
                     transition={{ type: 'spring', stiffness: 300 }}
-                    className='bg-primary size-11 rounded-xl flex justify-center items-center text-black shadow-sm'
+                    className='bg-primary size-11 rounded-xl flex justify-center items-center dark:text-black text-white shadow-sm'
                   >
                     <Building className='size-6' />
                   </motion.div>
@@ -474,7 +474,7 @@ export default function page() {
                   <motion.div
                     whileHover={{ scale: 1.1, rotate: 5 }}
                     transition={{ type: 'spring', stiffness: 300 }}
-                    className='bg-primary size-11 rounded-xl flex justify-center items-center text-black shadow-sm'
+                    className='bg-primary size-11 rounded-xl flex justify-center items-center dark:text-black text-white shadow-sm'
                   >
                     <Handshake className='size-6' />
                   </motion.div>
@@ -507,11 +507,17 @@ export default function page() {
               transition={{ duration: 0.45 }}
               className='mx-auto'
             >
-              <TabsList className='h-14 w-76 px-1.5 gap-3 bg-muted/20 rounded-4xl  mx-auto '>
-                <TabsTrigger value='before' className='text-white!'>
+              <TabsList className='h-14 w-76 px-1.5 gap-3 bg-muted/10 dark:bg-muted/20 rounded-4xl  mx-auto '>
+                <TabsTrigger
+                  value='before'
+                  className='text-black dark:text-white'
+                >
                   Before
                 </TabsTrigger>
-                <TabsTrigger value='after' className='text-white!'>
+                <TabsTrigger
+                  value='after'
+                  className='text-black dark:text-white'
+                >
                   <Image
                     src={'/Favicon-2.png'}
                     width={100}
@@ -536,7 +542,7 @@ export default function page() {
                   variants={fadeInUp}
                   className='sm:col-span-3 h-full'
                 >
-                  <Card className='rounded-xl h-full flex flex-col bg-light-dark p-5 border border-muted/20 shadow-none '>
+                  <Card className='rounded-xl h-full flex flex-col bg-light-foreground p-5 border border-muted/20 shadow-none '>
                     <div className='bg-white rounded-full size-11 flex items-center justify-center shadow-none'>
                       <Atom className='size-5 text-gray-700' />
                     </div>
@@ -556,7 +562,7 @@ export default function page() {
                   variants={fadeInUp}
                   className='sm:col-span-2 h-full'
                 >
-                  <Card className='rounded-xl h-full flex flex-col bg-light-dark p-5 border border-muted/20 shadow-none '>
+                  <Card className='rounded-xl h-full flex flex-col bg-light-foreground p-5 border border-muted/20 shadow-none '>
                     <div className='bg-white rounded-full size-11 flex items-center justify-center shadow-none'>
                       <Zap className='size-5 text-gray-700' />
                     </div>
@@ -576,7 +582,7 @@ export default function page() {
                   variants={fadeInUp}
                   className='sm:col-span-2 h-full'
                 >
-                  <Card className='rounded-xl h-full flex flex-col bg-light-dark p-5 border border-muted/20 shadow-none '>
+                  <Card className='rounded-xl h-full flex flex-col bg-light-foreground p-5 border border-muted/20 shadow-none '>
                     <div className='bg-white rounded-full size-11 flex items-center justify-center shadow-none'>
                       <Puzzle className='size-5 text-gray-700' />
                     </div>
@@ -596,7 +602,7 @@ export default function page() {
                   variants={fadeInUp}
                   className='sm:col-span-3 h-full'
                 >
-                  <Card className='rounded-xl h-full flex flex-col bg-light-dark p-5 border border-muted/20 shadow-none '>
+                  <Card className='rounded-xl h-full flex flex-col bg-light-foreground p-5 border border-muted/20 shadow-none '>
                     <div className='bg-white rounded-full size-11 flex items-center justify-center shadow-none'>
                       <List className='size-5 text-gray-700' />
                     </div>

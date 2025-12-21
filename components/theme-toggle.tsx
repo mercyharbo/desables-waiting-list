@@ -1,0 +1,34 @@
+'use client'
+
+import { useTheme } from 'next-themes'
+import { useEffect, useState } from 'react'
+import { Switch } from './ui/switch'
+
+export function ThemeToggle() {
+  const [mounted, setMounted] = useState(false)
+  const { theme, setTheme, resolvedTheme } = useTheme()
+
+  useEffect(() => {
+    setMounted(true)
+  }, [])
+
+  if (!mounted) {
+    return null
+  }
+
+  const current = theme === 'system' ? resolvedTheme : theme
+  const checked = current === 'dark'
+
+  return (
+    <div className='flex items-center gap-3'>
+      <span className='text-sm'>
+        Switch to {checked ? 'Light' : 'Dark'} mode
+      </span>
+      <Switch
+        checked={checked}
+        onCheckedChange={(value: boolean) => setTheme(value ? 'dark' : 'light')}
+        aria-label='Toggle theme'
+      />
+    </div>
+  )
+}

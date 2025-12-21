@@ -2,12 +2,12 @@
 
 import { Button } from '@/components/ui/button'
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
-import Marquee from '@/components/ui/marquee'
 import WaitlistDialog from '@/components/waitlist-dialog'
 import { AnimatePresence, motion } from 'framer-motion'
 import { ChevronDown, Eye, Heart, Target } from 'lucide-react'
 import Link from 'next/link'
 import { useState } from 'react'
+import Marquee from 'react-fast-marquee'
 
 const fadeInUp = {
   initial: { opacity: 0, y: 20 },
@@ -98,10 +98,15 @@ export default function Home() {
       >
         <div className='mx-auto max-w-5xl text-center space-y-8'>
           {/* Decorative badge */}
-          <Marquee>
-            <span className='text-sm font-semibold uppercase text-primary'>
-              Now accepting early access applications
-            </span>
+          <Marquee >
+            <div className='flex items-center gap-5'>
+              <span className='text-sm font-semibold uppercase text-primary'>
+                Now accepting early access applications
+              </span>
+              <span className='text-sm font-semibold uppercase text-primary'>
+                Now accepting early access applications
+              </span>
+            </div>
           </Marquee>
 
           {/* Main heading with gradient */}
@@ -115,7 +120,9 @@ export default function Home() {
               Accessible learning
             </span>
             <br />
-            <span className='text-white'>for people with disabilities</span>
+            <span className='dark:text-white text-black'>
+              for people with disabilities
+            </span>
           </motion.h1>
 
           {/* Description */}
@@ -123,7 +130,7 @@ export default function Home() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className='text-gray-300 text-lg lg:text-xl max-w-3xl mx-auto leading-relaxed'
+            className='text-gray-600 dark:text-gray-400 text-lg lg:text-xl max-w-3xl mx-auto leading-relaxed'
           >
             We are building a digital learning platform that equips people with
             disabilities with accessible and personalised tech skills. We
@@ -141,7 +148,7 @@ export default function Home() {
               <Button
                 onClick={() => setDialogOpen(true)}
                 size='lg'
-                className='rounded-full h-14 px-10 text-black text-sm font-semibold'
+                className='rounded-full h-14 px-10 text-white dark:text-black text-sm font-semibold'
               >
                 Get early access
               </Button>
@@ -151,7 +158,7 @@ export default function Home() {
                 <Button
                   size='lg'
                   variant='outline'
-                  className='rounded-full h-14 px-10 text-sm text-white font-semibold hover:bg-muted/10! hover:border-muted/20! hover:text-white bg-muted/5! transition-all'
+                  className='rounded-full h-14 px-10 text-sm dark:text-white font-semibold hover:bg-muted/10! hover:border-muted/20! hover:text-black dark:hover:text-white bg-muted/5! transition-all'
                 >
                   Science behind Desables
                 </Button>
@@ -167,19 +174,19 @@ export default function Home() {
             className='pt-12 flex flex-wrap items-center justify-center gap-8 text-sm text-muted-foreground'
           >
             <div className='flex items-center gap-2'>
-              <Heart className='size-4 text-primary-dark fill-primary-dark' />
+              <Heart className='size-4 text-primary fill-primary dark:text-primary dark:fill-primary' />
               <span className='font-medium'>
                 Built with accessibility first
               </span>
             </div>
             <div className='flex items-center gap-2'>
-              <Heart className='size-4 text-primary-dark fill-primary-dark' />
+              <Heart className='size-4 text-primary fill-primary dark:text-primary dark:fill-primary' />
               <span className='font-medium'>
                 Built with accessibility first
               </span>
             </div>
             <div className='flex items-center gap-2'>
-              <Heart className='size-4 text-primary-dark fill-primary-dark' />
+              <Heart className='size-4 text-primary fill-primary dark:text-primary dark:fill-primary' />
               <span className='font-medium'>
                 Built with accessibility first
               </span>
@@ -188,7 +195,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className='space-y-10 py-16 lg:py-24 bg-primary-dark'>
+      <section className='space-y-10 py-16 lg:py-24 bg-primary'>
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -196,10 +203,10 @@ export default function Home() {
           transition={{ duration: 0.5 }}
           className='prose mx-auto w-full lg:max-w-4xl text-center space-y-3'
         >
-          <h2 className='text-4xl lg:text-5xl font-bold text-white'>
+          <h2 className='text-4xl lg:text-5xl font-bold dark:text-black text-white'>
             Why We Exist
           </h2>
-          <p className='text-lg lg:text-xl text-gray-300'>
+          <p className='text-lg lg:text-xl dark:text-gray-700 text-gray-300'>
             Inspiring Learners Begins With You— Join Desables
           </p>
         </motion.div>
@@ -212,12 +219,12 @@ export default function Home() {
           className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mx-auto max-w-7xl px-6'
         >
           <motion.div variants={fadeInUp} className='md:col-span-1'>
-            <Card className='group bg-black shadow-none hover:scale-105 w-full transition-all duration-300 border border-gray-700 hover:border-primary/20 h-full'>
+            <Card className='group dark:bg-light-foreground bg-black shadow-none hover:scale-105 w-full transition-all duration-300 border border-gray-700 hover:border-primary/20 h-full'>
               <CardHeader className='flex flex-col gap-4'>
                 <motion.div
                   whileHover={{ scale: 1.1, rotate: 5 }}
                   transition={{ type: 'spring', stiffness: 300 }}
-                  className='bg-primary size-14 rounded-xl flex justify-center items-center text-black shadow-sm'
+                  className='bg-primary size-14 rounded-xl flex justify-center items-center text-white dark:text-black shadow-sm'
                 >
                   <Target className='size-7' />
                 </motion.div>
@@ -236,12 +243,12 @@ export default function Home() {
           </motion.div>
 
           <motion.div variants={fadeInUp} className='md:col-span-1'>
-            <Card className='group bg-black shadow-none hover:scale-105 transition-all duration-300 border border-gray-700 hover:border-primary/20 h-full'>
+            <Card className='group dark:bg-light-foreground bg-black shadow-none hover:scale-105 transition-all duration-300 border border-gray-700 hover:border-primary/20 h-full'>
               <CardHeader className='flex flex-col gap-4'>
                 <motion.div
                   whileHover={{ scale: 1.1, rotate: 5 }}
                   transition={{ type: 'spring', stiffness: 300 }}
-                  className='bg-primary size-14 rounded-xl flex justify-center items-center text-black shadow-sm'
+                  className='bg-primary size-14 rounded-xl flex justify-center items-center text-white dark:text-black shadow-sm'
                 >
                   <Eye className='size-7' />
                 </motion.div>
@@ -263,12 +270,12 @@ export default function Home() {
             variants={fadeInUp}
             className='md:col-span-2 lg:col-span-1'
           >
-            <Card className='group bg-black shadow-none hover:scale-105 transition-all duration-300 border border-gray-700 hover:border-primary/20 h-full'>
+            <Card className='group dark:bg-light-foreground bg-black shadow-none hover:scale-105 transition-all duration-300 border border-gray-700 hover:border-primary/20 h-full'>
               <CardHeader className='flex flex-col gap-4'>
                 <motion.div
                   whileHover={{ scale: 1.1, rotate: 5 }}
                   transition={{ type: 'spring', stiffness: 300 }}
-                  className='bg-primary size-14 rounded-xl flex justify-center items-center text-black shadow-sm'
+                  className='bg-primary size-14 rounded-xl flex justify-center items-center text-white dark:text-black shadow-sm'
                 >
                   <Heart className='size-7' />
                 </motion.div>
@@ -301,7 +308,7 @@ export default function Home() {
               <h2 className='text-4xl lg:text-5xl font-bold text-primary'>
                 Frequently Asked Questions
               </h2>
-              <p className='text-gray-300 text-lg'>
+              <p className='text-gray-600 dark:text-gray-300 text-lg'>
                 Everything you need to know about Desables
               </p>
             </div>
@@ -314,22 +321,22 @@ export default function Home() {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.5, delay: index * 0.1 }}
-                  className={`border border-gray-700 rounded-xl overflow-hidden transition-colors ${
+                  className={`border dark:border-gray-700 rounded-xl overflow-hidden transition-colors ${
                     openIndex === index
-                      ? 'bg-[#262626] border-primary/20'
+                      ? 'dark:bg-[#262626] bg-muted/5 border-primary/20'
                       : 'bg-transparent hover:border-primary/20'
                   }`}
                 >
                   <button
                     onClick={() => toggleFAQ(index)}
                     className={`w-full px-6 py-4 flex items-center justify-between text-left transition-colors ${
-                      openIndex === index ? '' : 'hover:bg-primary-dark/5'
+                      openIndex === index ? '' : 'hover:bg-primary/5'
                     }`}
                     aria-expanded={openIndex === index}
                   >
                     <span
                       className={`font-semibold text-base pr-8 ${
-                        openIndex === index ? 'text-primary' : ' text-white'
+                        openIndex === index ? 'text-primary' : ''
                       }`}
                     >
                       {faq.question}
@@ -355,7 +362,7 @@ export default function Home() {
                         className='overflow-hidden'
                       >
                         <div className='px-6 pb-5 pt-2'>
-                          <p className='text-gray-300 leading-relaxed'>
+                          <p className='text-gray-700 dark:text-gray-300 leading-relaxed'>
                             {faq.answer}
                           </p>
                         </div>
@@ -369,7 +376,7 @@ export default function Home() {
                 <Button
                   onClick={toggleShowMore}
                   aria-expanded={showMore}
-                  className='inline-flex items-center gap-2 text-black h-12 rounded-4xl w-40 px-5 font-semibold'
+                  className='inline-flex items-center gap-2 dark:text-black h-12 rounded-4xl w-40 px-5 font-semibold'
                 >
                   {showMore ? 'See less' : 'See more'}
                 </Button>
