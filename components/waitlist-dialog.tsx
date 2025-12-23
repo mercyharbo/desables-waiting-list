@@ -68,12 +68,12 @@ export default function WaitlistDialog({
               value={name}
               onChange={(e) => setName(e.target.value)}
               required
-              className='peer border-muted bg-muted/5! h-12'
+              className='peer border-muted bg-muted/5! h-12 outline-0! text-black! dark:text-white!'
             />
 
             <label
               htmlFor='name'
-              className='absolute left-3 top-1/2 -translate-y-1/2 text-sm text-gray-400 px-1 transition-all duration-200 pointer-events-none peer-placeholder-shown:top-1/2 peer-placeholder-shown:-translate-y-1/2 peer-placeholder-shown:text-sm peer-focus:-top-2 peer-focus:-translate-y-0 peer-focus:text-xs dark:peer-focus:text-primary dark:peer-focus:bg-black peer-focus:bg-muted/20 peer-focus:text-black  peer-[:not(:placeholder-shown)]:-top-2 peer-[:not(:placeholder-shown)]:-translate-y-0 peer-[:not(:placeholder-shown)]:text-xs peer-[:not(:placeholder-shown)]:text-primary peer-[:not(:placeholder-shown)]:bg-black'
+              className='absolute left-3 top-1/2 -translate-y-1/2 text-sm text-gray-400 px-1 transition-all duration-200 pointer-events-none peer-placeholder-shown:top-1/2 peer-placeholder-shown:-translate-y-1/2 peer-placeholder-shown:text-sm peer-focus:-top-2 peer-focus:-translate-y-0 peer-focus:text-xs dark:peer-focus:text-primary dark:peer-focus:bg-black peer-focus:bg-muted peer-focus:text-black  peer-[:not(:placeholder-shown)]:-top-2 peer-[:not(:placeholder-shown)]:-translate-y-0 peer-[:not(:placeholder-shown)]:text-xs peer-[:not(:placeholder-shown)]:text-white peer-[:not(:placeholder-shown)]:bg-black'
             >
               Name
             </label>
@@ -88,12 +88,12 @@ export default function WaitlistDialog({
               value={email}
               onChange={(e) => setEmail(e.target.value)}
               required
-              className='peer border-muted bg-muted/5! h-12'
+              className='peer border-muted bg-muted/5! h-12 outline-0! text-black! dark:text-white!'
             />
 
             <label
               htmlFor='email'
-              className='absolute left-3 top-1/2 -translate-y-1/2 text-sm text-gray-400 px-1 transition-all duration-200 pointer-events-none peer-placeholder-shown:top-1/2 peer-placeholder-shown:-translate-y-1/2 peer-placeholder-shown:text-sm peer-focus:-top-2 peer-focus:-translate-y-0 peer-focus:text-xs dark:peer-focus:text-primary dark:peer-focus:bg-black peer-focus:bg-muted/20 peer-focus:text-black peer-[:not(:placeholder-shown)]:-top-2 peer-[:not(:placeholder-shown)]:-translate-y-0 peer-[:not(:placeholder-shown)]:text-xs peer-[:not(:placeholder-shown)]:text-primary peer-[:not(:placeholder-shown)]:bg-black'
+              className='absolute left-3 top-1/2 -translate-y-1/2 text-sm text-gray-400 px-1 transition-all duration-200 pointer-events-none peer-placeholder-shown:top-1/2 peer-placeholder-shown:-translate-y-1/2 peer-placeholder-shown:text-sm peer-focus:-top-2 peer-focus:-translate-y-0 peer-focus:text-xs dark:peer-focus:text-primary dark:peer-focus:bg-black peer-focus:bg-muted/20 peer-focus:text-black peer-[:not(:placeholder-shown)]:-top-2 peer-[:not(:placeholder-shown)]:-translate-y-0 peer-[:not(:placeholder-shown)]:text-xs peer-[:not(:placeholder-shown)]:text-white peer-[:not(:placeholder-shown)]:bg-black'
             >
               Email address
             </label>
@@ -109,7 +109,7 @@ export default function WaitlistDialog({
             <Select value={referral} onValueChange={setReferral}>
               <SelectTrigger
                 size='xl'
-                className='border-muted bg-muted/5! w-full h-12'
+                className='border-muted text-black! dark:text-white! bg-muted/5! w-full h-12'
               >
                 <SelectValue placeholder='Select an option' />
               </SelectTrigger>
