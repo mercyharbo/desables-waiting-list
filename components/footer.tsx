@@ -12,17 +12,21 @@ export default function FooterComp() {
 
   const { theme, resolvedTheme } = useTheme()
   const [mounted, setMounted] = useState(false)
-  const [imgSrc, setImgSrc] = useState('/Group.svg')
+  const [fallbackSrc, setFallbackSrc] = useState<string | null>(null)
 
   useEffect(() => {
-    setMounted(true)
+    const id = setTimeout(() => setMounted(true), 0)
+    return () => clearTimeout(id)
   }, [])
 
-  useEffect(() => {
-    const current = theme === 'system' ? resolvedTheme : theme
-    if (!mounted) return
-    setImgSrc(current === 'dark' ? '/Group.svg' : '/light-logo.svg')
-  }, [theme, resolvedTheme, mounted])
+  const current = theme === 'system' ? resolvedTheme : theme
+  const imgSrc =
+    fallbackSrc ??
+    (mounted
+      ? current === 'dark'
+        ? '/Group.svg'
+        : '/light-logo.svg'
+      : '/Group.svg')
 
   return (
     <footer className='w-full border-t border-muted/20'>
@@ -41,7 +45,7 @@ export default function FooterComp() {
                 width={500}
                 height={40}
                 className='h-10 w-32'
-                onError={() => setImgSrc('/logo.png')}
+                onError={() => setFallbackSrc('/logo.png')}
               />
             </Link>
           </motion.div>
