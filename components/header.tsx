@@ -21,7 +21,12 @@ export default function Header() {
 
   const current = theme === 'system' ? resolvedTheme : theme
   const imgSrc =
-    fallbackSrc ?? (mounted ? (current === 'dark' ? '/Group.svg' : '/light-logo.svg') : '/Group.svg')
+    fallbackSrc ??
+    (mounted
+      ? current === 'dark'
+        ? '/Group.svg'
+        : '/light-logo.svg'
+      : '/Group.svg')
 
   return (
     <div className='mx-auto lg:px-16 px-6 py-8 flex items-center justify-between'>

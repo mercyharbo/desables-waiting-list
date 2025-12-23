@@ -21,7 +21,12 @@ export default function FooterComp() {
 
   const current = theme === 'system' ? resolvedTheme : theme
   const imgSrc =
-    fallbackSrc ?? (mounted ? (current === 'dark' ? '/Group.svg' : '/light-logo.svg') : '/Group.svg')
+    fallbackSrc ??
+    (mounted
+      ? current === 'dark'
+        ? '/Group.svg'
+        : '/light-logo.svg'
+      : '/Group.svg')
 
   return (
     <footer className='w-full border-t border-muted/20'>
