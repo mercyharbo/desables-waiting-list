@@ -4,6 +4,7 @@ import { Button } from '@/components/ui/button'
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
 import WaitlistDialog from '@/components/waitlist-dialog'
 import { faqsData } from '@/lib/faq'
+import { linkifyEmails } from '@/lib/linkify-emails'
 import { AnimatePresence, motion } from 'framer-motion'
 import { ChevronDown, Eye, Heart, Target } from 'lucide-react'
 import Image from 'next/image'
@@ -46,21 +47,9 @@ export default function Home() {
     <main className=' '>
       <section
         id='early-access'
-        className='relative lg:h-[80vh] xl:h-[80vh] md:h-[60vh] md:px-10 overflow-hidden w-full lg:px-16 px-5  grid grid-cols-1 lg:grid-cols-2 gap-5'
+        className='relative lg:h-[75vh] xl:h-[70vh] md:h-[50vh] md:px-10 overflow-hidden w-full lg:px-16 px-5  grid grid-cols-1 lg:grid-cols-2 gap-5'
       >
-        <div className='space-y-8 w-full flex flex-col justify-center items-start xl:max-w-4xl lg:max-w-4xl 2xl:max-w-3xl'>
-          {/* Decorative badge */}
-          {/* <Marquee >
-            <div className='flex items-center gap-5'>
-              <span className='text-sm font-semibold uppercase text-primary'>
-                Now accepting early access applications
-              </span>
-              <span className='text-sm font-semibold uppercase text-primary'>
-                Now accepting early access applications
-              </span>
-            </div>
-          </Marquee> */}
-
+        <div className='space-y-8 w-full flex flex-col justify-center items-start xl:max-w-4xl lg:max-w-4xl 2xl:max-w-4xl'>
           {/* Main heading with gradient */}
           <motion.h1
             initial={{ opacity: 0, y: 30 }}
@@ -69,11 +58,10 @@ export default function Home() {
             className='text-4xl/snug md:text-5xl/snug 2xl:text-6xl/snug xl:text-4xl/snug lg:text-4xl/snug font-bold'
           >
             <span className='bg-linear-to-br from-primary via-primary to-primary/70 bg-clip-text text-transparent'>
-              Accessible learning
-            </span>
-            <br />
+              Learning designed for
+            </span>{' '}
             <span className='dark:text-white text-black'>
-              for people with disabilities
+              how your mind works
             </span>
           </motion.h1>
 
@@ -84,9 +72,8 @@ export default function Home() {
             transition={{ duration: 0.6, delay: 0.2 }}
             className='text-gray-600 dark:text-gray-400 text-lg lg:text-lg 2xl:text-xl leading-relaxed'
           >
-            We are building a digital learning platform that equips people with
-            disabilities with accessible and personalised tech skills. We
-            believe that ability should always come first.
+            Accessible digital skills pathways for autistic and ADHD learners.
+            Built for clarity, confidence, and real outcomes.
           </motion.p>
 
           {/* CTA Buttons */}
@@ -106,7 +93,7 @@ export default function Home() {
                 size='lg'
                 className='rounded-full h-12 w-full lg:w-fit px-10 text-white dark:text-black text-sm font-semibold'
               >
-                Get early access
+                Join early access
               </Button>
             </motion.div>
             <motion.div
@@ -150,7 +137,7 @@ export default function Home() {
           </motion.div>
         </div>
 
-        <div className='absolute xl:-right-36 top-0 2xl:w-2/3 xl:w-[55%] lg:w-[55%] h-full hidden lg:block'>
+        <div className='absolute xl:-right-36 top-0 2xl:w-[55%] xl:w-[50%] lg:w-[50%] h-full hidden lg:block'>
           <Image
             src={'/hero-light.png'}
             alt='hero image'
@@ -180,7 +167,22 @@ export default function Home() {
             Why We Exist
           </h2>
           <p className='text-lg lg:text-xl dark:text-gray-700 text-gray-300'>
-            Inspiring Learners Begins With You— Join Desables
+            Most learning systems were not designed with different ways of
+            thinking in mind. They reward speed, conformity, and endurance,
+            often mistaking these for ability. For autistic and ADHD learners,
+            this can mean being overlooked, misunderstood, or excluded, not
+            because of a lack of talent, but because the environment was never
+            built to support how they learn and work.
+          </p>
+          <p className='text-lg lg:text-xl dark:text-gray-700 text-gray-300'>
+            Desables exists to challenge that pattern.
+          </p>
+          <p className='text-lg lg:text-xl dark:text-gray-700 text-gray-300'>
+            We believe that when learning environments are designed with
+            intention, care, and respect for neurodivergent experiences, ability
+            becomes visible. Barriers are reduced. Confidence grows. And
+            learning can once again become a pathway to opportunity rather than
+            a source of frustration.
           </p>
         </motion.div>
 
@@ -202,14 +204,15 @@ export default function Home() {
                   <Target className='size-7' />
                 </motion.div>
                 <CardTitle className='text-2xl lg:text-3xl text-white'>
-                  Mission
+                  Our Mission
                 </CardTitle>
               </CardHeader>
               <CardContent>
                 <p className='text-gray-300 leading-relaxed'>
-                  We put you at the centre. We listen first, design with you,
-                  and ensure accessibility is non-negotiable. Your progress
-                  remains yours. Your learning travels with you.
+                  To design neuroinclusive learning pathways that respect how
+                  different minds focus, process, and grow, enabling autistic
+                  and ADHD learners to develop meaningful digital skills and
+                  progress toward opportunities on their own terms.
                 </p>
               </CardContent>
             </Card>
@@ -226,14 +229,15 @@ export default function Home() {
                   <Eye className='size-7' />
                 </motion.div>
                 <CardTitle className='text-2xl lg:text-3xl text-white'>
-                  Vision
+                  Our Vision
                 </CardTitle>
               </CardHeader>
               <CardContent>
                 <p className='text-gray-300 leading-relaxed'>
-                  To create a world where digital skills education is
-                  universally accessible, and where ability, not disability,
-                  defines opportunity.
+                  A future where access to digital skills education is not
+                  determined by how well someone fits traditional systems, but
+                  by the quality of the environments created to support diverse
+                  ways of thinking, learning, and contributing.
                 </p>
               </CardContent>
             </Card>
@@ -253,15 +257,17 @@ export default function Home() {
                   <Heart className='size-7' />
                 </motion.div>
                 <CardTitle className='text-2xl lg:text-3xl text-white'>
-                  Values
+                  Our Values
                 </CardTitle>
               </CardHeader>
               <CardContent>
-                <p className='text-gray-300 leading-relaxed'>
-                  Accessibility first. Evidence over credentials. Community over
-                  competition. Your skills are recognised, valued, and ready for
-                  the world beyond the platform.
-                </p>
+                <ul className='list-disc list-inside space-y-1 text-left text-gray-600 dark:text-gray-300'>
+                  <li>Design with, not for</li>
+                  <li>Ability over conformity</li>
+                  <li>Care before scale</li>
+                  <li>Dignity in learning </li>
+                  <li>Progress that leads somewhere</li>
+                </ul>
               </CardContent>
             </Card>
           </motion.div>
@@ -336,7 +342,7 @@ export default function Home() {
                       >
                         <div className='px-6 pb-5 pt-2'>
                           <p className='text-gray-700 dark:text-gray-300 leading-relaxed'>
-                            {faq.answer}
+                            {linkifyEmails(faq.answer)}
                           </p>
                         </div>
                       </motion.div>

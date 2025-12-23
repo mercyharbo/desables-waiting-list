@@ -17,6 +17,7 @@ import {
   Zap,
 } from 'lucide-react'
 import Image from 'next/image'
+import Link from 'next/link'
 
 const fadeInUp = {
   initial: { opacity: 0, y: 20 },
@@ -48,17 +49,16 @@ export default function page() {
           className='space-y-6'
         >
           {/* Badge */}
-          <motion.div
+          {/* <motion.div
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.5, delay: 0.2 }}
             className='inline-flex items-center gap-2'
           >
-            {/* <div className='size-2 bg-primary rounded-full animate-pulse' /> */}
             <span className='text-sm font-semibold text-primary'>
               The Science Behind Desables
             </span>
-          </motion.div>
+          </motion.div> */}
 
           <motion.h1
             initial={{ opacity: 0, y: 20 }}
@@ -66,7 +66,7 @@ export default function page() {
             transition={{ duration: 0.6, delay: 0.3 }}
             className='text-4xl sm:text-5xl lg:text-6xl font-bold text-black dark:text-white leading-tight'
           >
-            About Desables
+            The Science Behind Desables
           </motion.h1>
 
           <motion.div
@@ -89,11 +89,373 @@ export default function page() {
             transition={{ duration: 0.6, delay: 0.5 }}
             className='text-lg lg:text-xl dark:text-gray-300 text-gray-600 leading-relaxed max-w-3xl mx-auto'
           >
-            Desables is an abilities-first learning platform for practical
-            digital skills. We co-design with disabled creators, deliver
-            accessible courses by default, and issue portable, employer
-            recognised credentials that lead to real work.
+            Desables is built on decades of evidence from cognitive science,
+            neurodiversity research, and inclusive education design. These
+            fields show that learning environments matter as much as — if not
+            more than — individual talent. We build learning environments based
+            on how people actually focus, process information, and develop
+            skills, not on assumptions about how learning should work. Below are
+            key principles that shape Desables’ design, each with a link to
+            trusted research or frameworks.
           </motion.p>
+        </motion.div>
+      </section>
+
+      {/* smart section */}
+      <section className='mx-auto max-w-7xl border rounded-xl px-6 py-12 bg-white/5 dark:bg-black/20 backdrop-blur-sm'>
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+          className='space-y-6'
+        >
+          <h3 className='text-2xl lg:text-3xl font-bold dark:text-white text-black'>
+            Neurodiversity as Natural Cognitive Variation
+          </h3>
+
+          <p className='text-lg dark:text-gray-300 text-gray-600 leading-relaxed'>
+            Modern psychology and education research increasingly recognise
+            neurodiversity as a natural form of human variation rather than a
+            deficit. Autism and ADHD are understood as differences in cognitive
+            processing, attention, and sensory experience — not indicators of
+            reduced intelligence or motivation. This perspective is supported by
+            organisations such as Harvard Health, which frames neurodiversity as
+            a strengths-based concept rather than a disorder-focused one ( (
+            <Link
+              href='https://www.health.harvard.edu/blog/what-is-neurodiversity-202111162645'
+              target='_blank'
+              rel='noopener noreferrer'
+              className='text-primary underline'
+            >
+              https://www.health.harvard.edu/blog/what-is-neurodiversity-202111162645
+            </Link>
+            ), as well as the British Psychological Society, which emphasises
+            that challenges often arise from environmental mismatch rather than
+            individual limitation (
+            <Link
+              href='https://www.bps.org.uk/psychologist/neurodiversity'
+              target='_blank'
+              rel='noopener noreferrer'
+              className='text-primary underline'
+            >
+              https://www.bps.org.uk/psychologist/neurodiversity
+            </Link>
+            ).
+          </p>
+
+          <p className='text-lg dark:text-gray-300 text-gray-600 leading-relaxed'>
+            Research and advocacy organisations including the National Autistic
+            Society further reinforce that autistic cognition should be
+            understood through difference, not deficiency (
+            <Link
+              href='https://www.autism.org.uk/advice-and-guidance/what-is-autism/neurodiversity'
+              target='_blank'
+              rel='noopener noreferrer'
+              className='text-primary underline'
+            >
+              https://www.autism.org.uk/advice-and-guidance/what-is-autism/neurodiversity
+            </Link>
+            ).
+          </p>
+
+          <h4 className='text-xl font-semibold dark:text-white text-black pt-2'>
+            How Desables applies this
+          </h4>
+
+          <p className='text-lg dark:text-gray-300 text-gray-600 leading-relaxed'>
+            Desables treats neurodivergent cognition as a starting point for
+            design, not an exception to be accommodated. The platform avoids
+            deficit-based language and does not frame learners as needing to
+            “catch up” to a norm. Learning pathways are designed to support
+            depth, pattern recognition, and nonlinear thinking, allowing
+            learners to engage with material in ways that align with how their
+            minds naturally work. Progress is measured by capability and
+            understanding, not by speed or constant engagement.
+          </p>
+        </motion.div>
+      </section>
+
+      <section className='mx-auto max-w-7xl border rounded-xl px-6 py-12 bg-white/5 dark:bg-black/20 backdrop-blur-sm'>
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+          className='space-y-6'
+        >
+          <h3 className='text-2xl lg:text-3xl font-bold dark:text-white text-black'>
+            Cognitive Load and Learning Effectiveness
+          </h3>
+
+          <p className='text-lg dark:text-gray-300 text-gray-600 leading-relaxed'>
+            Cognitive Load Theory explains that learning is disrupted when
+            working memory is overloaded by unnecessary complexity, unclear
+            structure, or excessive stimuli. Educational psychology research
+            consistently shows that reducing extraneous cognitive load improves
+            comprehension, retention, and persistence in learning. Clear
+            explanations of this theory are widely published by cognitive
+            science educators such as Simply Psychology (
+            <Link
+              href='https://www.simplypsychology.org/cognitive-load-theory.html'
+              target='_blank'
+              rel='noopener noreferrer'
+              className='text-primary underline'
+            >
+              https://www.simplypsychology.org/cognitive-load-theory.html
+            </Link>
+            ) and by research-led education groups like The Learning Scientists
+            (
+            <Link
+              href='https://www.learningscientists.org/blog/2017/7/20/cognitive-load'
+              target='_blank'
+              rel='noopener noreferrer'
+              className='text-primary underline'
+            >
+              https://www.learningscientists.org/blog/2017/7/20/cognitive-load
+            </Link>
+            ).
+          </p>
+
+          <p className='text-lg dark:text-gray-300 text-gray-600 leading-relaxed'>
+            These findings are particularly relevant for digital learning
+            environments, where interface design and information density can
+            either support or hinder learning.
+          </p>
+
+          <h4 className='text-xl font-semibold dark:text-white text-black pt-2'>
+            How Desables applies this
+          </h4>
+
+          <p className='text-lg dark:text-gray-300 text-gray-600 leading-relaxed'>
+            Desables is intentionally designed to minimise unnecessary cognitive
+            effort. Interfaces are calm and predictable, instructions are
+            explicit, and learning is broken into manageable stages. Learners
+            are not presented with excessive choices or dense information all at
+            once. Time pressure is avoided, allowing learners to focus on
+            understanding and skill development rather than managing overwhelm.
+          </p>
+        </motion.div>
+      </section>
+
+      <section className='mx-auto max-w-7xl border rounded-xl px-6 py-12 bg-white/5 dark:bg-black/20 backdrop-blur-sm'>
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+          className='space-y-6'
+        >
+          <h3 className='text-2xl lg:text-3xl font-bold dark:text-white text-black'>
+            Attention, Executive Function, and ADHD
+          </h3>
+
+          <p className='text-lg dark:text-gray-300 text-gray-600 leading-relaxed'>
+            Research into ADHD highlights differences in executive functioning,
+            including task initiation, sustained attention, and time perception.
+            These differences are widely recognised by institutions such as the
+            Centers for Disease Control and Prevention (CDC) (
+            <Link
+              href='https://www.cdc.gov/adhd/features/executive-function.html'
+              target='_blank'
+              rel='noopener noreferrer'
+              className='text-primary underline'
+            >
+              https://www.cdc.gov/adhd/features/executive-function.html
+            </Link>
+            ) and education-focused organisations like Understood.org, which
+            emphasise that executive function challenges are not a lack of
+            ability, but a difference in cognitive regulation (
+            <Link
+              href='https://www.understood.org/en/articles/executive-functioning-issues-what-you-need-to-know'
+              target='_blank'
+              rel='noopener noreferrer'
+              className='text-primary underline'
+            >
+              https://www.understood.org/en/articles/executive-functioning-issues-what-you-need-to-know
+            </Link>
+            ).
+          </p>
+
+          <p className='text-lg dark:text-gray-300 text-gray-600 leading-relaxed'>
+            Traditional learning systems often exacerbate these challenges
+            through rigid deadlines, constant notifications, and penalty-driven
+            progression.
+          </p>
+
+          <h4 className='text-xl font-semibold dark:text-white text-black pt-2'>
+            How Desables applies this
+          </h4>
+
+          <p className='text-lg dark:text-gray-300 text-gray-600 leading-relaxed'>
+            Desables supports executive function differences by designing for
+            continuity rather than enforcement. Learning pathways allow flexible
+            pacing, pauses without penalty, and clear re-entry points after
+            breaks. Progress is guided through milestones rather than constant
+            deadlines, helping learners initiate and sustain engagement without
+            pressure or shame.
+          </p>
+        </motion.div>
+      </section>
+
+      <section className='mx-auto max-w-7xl border rounded-xl px-6 py-12 bg-white/5 dark:bg-black/20 backdrop-blur-sm'>
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+          className='space-y-6'
+        >
+          <h3 className='text-2xl lg:text-3xl font-bold dark:text-white text-black'>
+            Universal Design for Learning (UDL)
+          </h3>
+
+          <p className='text-lg dark:text-gray-300 text-gray-600 leading-relaxed'>
+            Universal Design for Learning (UDL) is an internationally recognised
+            framework developed by CAST, which demonstrates that learning
+            environments designed for diversity improve outcomes for all
+            learners. UDL principles are widely adopted across education systems
+            and endorsed by global bodies focused on inclusive education (
+            <Link
+              href='https://www.cast.org/impact/universal-design-for-learning-udl'
+              target='_blank'
+              rel='noopener noreferrer'
+              className='text-primary underline'
+            >
+              https://www.cast.org/impact/universal-design-for-learning-udl
+            </Link>
+            ).
+          </p>
+
+          <p className='text-lg dark:text-gray-300 text-gray-600 leading-relaxed'>
+            UNESCO’s work on inclusive education further reinforces that
+            accessibility and flexibility are foundational to equitable learning
+            environments (
+            <Link
+              href='https://www.unesco.org/en/inclusive-education'
+              target='_blank'
+              rel='noopener noreferrer'
+              className='text-primary underline'
+            >
+              https://www.unesco.org/en/inclusive-education
+            </Link>
+            ).
+          </p>
+
+          <h4 className='text-xl font-semibold dark:text-white text-black pt-2'>
+            How Desables applies this
+          </h4>
+
+          <p className='text-lg dark:text-gray-300 text-gray-600 leading-relaxed'>
+            Desables incorporates UDL principles throughout the platform.
+            Learners are offered multiple ways to engage with content,
+            flexibility in how they move through learning pathways, and choice
+            in how they demonstrate understanding. There is no single “correct”
+            learning route. Accessibility is embedded into the structure of the
+            platform rather than added as a feature.
+          </p>
+        </motion.div>
+      </section>
+
+      <section className='mx-auto max-w-7xl border rounded-xl px-6 py-12 bg-white/5 dark:bg-black/20 backdrop-blur-sm'>
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+          className='space-y-6'
+        >
+          <h3 className='text-2xl lg:text-3xl font-bold dark:text-white text-black'>
+            Skills, Capability, and the Future of Work
+          </h3>
+
+          <p className='text-lg dark:text-gray-300 text-gray-600 leading-relaxed'>
+            Global labour market research increasingly shows a shift toward
+            skills-based evaluation and lifelong learning. The World Economic
+            Forum highlights that employers are placing greater value on
+            demonstrable skills rather than traditional credentials alone (
+            <Link
+              href='https://www.weforum.org/reports/the-future-of-jobs-report-2025'
+              target='_blank'
+              rel='noopener noreferrer'
+              className='text-primary underline'
+            >
+              https://www.weforum.org/reports/the-future-of-jobs-report-2025
+            </Link>
+            ). Similarly, the OECD emphasises the importance of skills
+            development and adaptability in modern economies (
+            <Link
+              href='https://www.oecd.org/skills/'
+              target='_blank'
+              rel='noopener noreferrer'
+              className='text-primary underline'
+            >
+              https://www.oecd.org/skills/
+            </Link>
+            ).
+          </p>
+
+          <p className='text-lg dark:text-gray-300 text-gray-600 leading-relaxed'>
+            This research underscores the importance of learning experiences
+            that translate into real capability.
+          </p>
+
+          <h4 className='text-xl font-semibold dark:text-white text-black pt-2'>
+            How Desables applies this
+          </h4>
+
+          <p className='text-lg dark:text-gray-300 text-gray-600 leading-relaxed'>
+            Desables focuses on building and making visible real skills.
+            Learning pathways prioritise application, confidence, and the
+            ability to articulate what has been learned. Progress is connected
+            to capability rather than completion alone, supporting learners to
+            move toward opportunities when they are ready.
+          </p>
+        </motion.div>
+      </section>
+
+      <section className='mx-auto max-w-7xl border rounded-xl px-6 py-12'>
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+          className='space-y-6'
+        >
+          <h3 className='text-2xl lg:text-3xl font-bold dark:text-white text-black'>
+            Inclusive Education and Learner Retention
+          </h3>
+
+          <p className='text-lg dark:text-gray-300 text-gray-600 leading-relaxed'>
+            Research into inclusive education consistently shows that
+            neurodivergent learners are more likely to persist when learning
+            environments are predictable, respectful, and psychologically safe.
+            UK-based bodies such as the Office for Students highlight the
+            importance of inclusive design in improving outcomes for disabled
+            learners (
+            <Link
+              href='https://www.officeforstudents.org.uk/advice-and-guidance/promoting-equal-opportunities/disability/'
+              target='_blank'
+              rel='noopener noreferrer'
+              className='text-primary underline'
+            >
+              https://www.officeforstudents.org.uk/advice-and-guidance/promoting-equal-opportunities/disability/
+            </Link>
+            ).
+          </p>
+
+          <h4 className='text-xl font-semibold dark:text-white text-black pt-2'>
+            How Desables applies this
+          </h4>
+
+          <p className='text-lg dark:text-gray-300 text-gray-600 leading-relaxed'>
+            Desables prioritises learner dignity as a core principle. There are
+            no public rankings or competitive pressure mechanisms. Language
+            across the platform respects autonomy and agency, and community
+            spaces are designed for support rather than comparison. Retention is
+            not enforced — it emerges naturally when learners feel safe,
+            respected, and supported.
+          </p>
         </motion.div>
       </section>
 
@@ -498,7 +860,7 @@ export default function page() {
 
       {/* Before and after section */}
       <section className='mx-auto max-w-7xl px-5'>
-        <div className='mx-auto max-w-2xl flex justify-center flex-col items-center gap-5'>
+        <div className='mx-auto max-w-3xl flex justify-center flex-col items-center gap-5'>
           <Tabs defaultValue='before' className='space-y-8'>
             <motion.div
               initial={{ opacity: 0, y: 8 }}
@@ -548,11 +910,14 @@ export default function page() {
                     </div>
                     <CardContent className='p-0 space-y-3 flex-1'>
                       <h3 className='text-lg font-semibold text-gray-300'>
-                        8-hour workday, only 3 that matter.
+                        Learning feels heavier than it should
                       </h3>
                       <p className='text-sm text-gray-300'>
-                        Most people get just 3 hours of true focus a day. The
-                        rest vanishes into email, chat, and busywork.
+                        You start with good intentions, but the learning
+                        environment asks too much of you at once. There are too
+                        many options, too many tabs, too many expectations.
+                        Instead of focusing on the skill, your energy is spent
+                        navigating the system.
                       </p>
                     </CardContent>
                   </Card>
@@ -568,11 +933,13 @@ export default function page() {
                     </div>
                     <CardContent className='p-0 space-y-3 flex-1'>
                       <h3 className='text-lg font-semibold text-gray-300'>
-                        Decision fatigue by noon
+                        Decision fatigue sets in early
                       </h3>
                       <p className='text-sm text-gray-300'>
-                        Up to 40% of productive time is lost simply deciding
-                        what to do next.
+                        You’re constantly deciding what to learn next, where to
+                        pick up from, or whether you’re even doing it “right.”
+                        The mental effort of choosing outweighs the effort of
+                        learning. By midday, momentum is gone.
                       </p>
                     </CardContent>
                   </Card>
@@ -588,11 +955,13 @@ export default function page() {
                     </div>
                     <CardContent className='p-0 space-y-3 flex-1'>
                       <h3 className='text-lg font-semibold text-gray-300'>
-                        Scattered attention
+                        Attention is fragmented
                       </h3>
                       <p className='text-sm text-gray-300'>
-                        The average worker changes screens or tasks every
-                        minute, making work feel fragmented.
+                        Learning is broken into short, disconnected moments. You
+                        jump between platforms, notes, reminders, and
+                        half-finished tasks. Nothing feels contained, so focus
+                        never fully settles.
                       </p>
                     </CardContent>
                   </Card>
@@ -608,11 +977,13 @@ export default function page() {
                     </div>
                     <CardContent className='p-0 space-y-3 flex-1'>
                       <h3 className='text-lg font-semibold text-gray-300'>
-                        Endless lists
+                        Progress feels invisible
                       </h3>
                       <p className='text-sm text-gray-300'>
-                        4 in 10 tasks never get finished, so the backlog grows
-                        faster than the done list.
+                        You’ve spent time and effort, but it’s hard to point to
+                        what you’ve actually gained. Courses are started but not
+                        completed. Confidence doesn’t grow, because the system
+                        never makes your progress tangible.
                       </p>
                     </CardContent>
                   </Card>
@@ -632,17 +1003,20 @@ export default function page() {
                   variants={fadeInUp}
                   className='sm:col-span-3 h-full'
                 >
-                  <Card className='rounded-xl h-full flex flex-col bg-blue-50 p-5 border border-muted/20 shadow-none '>
+                  <Card className='rounded-xl h-full flex flex-col bg-[#E4F6E9] p-5 border border-muted/20 shadow-none '>
                     <div className='bg-white rounded-full size-11 flex items-center justify-center shadow-none'>
-                      <Calendar className='size-5 text-blue-600' />
+                      <Calendar className='size-5 text-black' />
                     </div>
                     <CardContent className='p-0 space-y-3 flex-1'>
-                      <h3 className='text-lg font-semibold text-blue-700'>
-                        One clear plan
+                      <h3 className='text-lg font-semibold text-black'>
+                        One clear learning path
                       </h3>
-                      <p className='text-sm text-blue-600'>
-                        Start your day with a clear ranked list; and not a blank
-                        page or messy backlog.
+                      <p className='text-sm text-black'>
+                        You begin with structure that removes uncertainty.
+                        There’s a clear sense of what you’re working on, why it
+                        matters, and what comes next. You’re not faced with
+                        endless choices, the platform guides you gently, without
+                        rushing or restricting you.
                       </p>
                     </CardContent>
                   </Card>
@@ -652,17 +1026,19 @@ export default function page() {
                   variants={fadeInUp}
                   className='sm:col-span-2 h-full'
                 >
-                  <Card className='rounded-xl h-full flex flex-col bg-purple-50 p-5 border border-muted/20 shadow-none '>
+                  <Card className='rounded-xl h-full flex flex-col bg-[#eeb6b7] p-5 border border-muted/20 shadow-none '>
                     <div className='bg-white rounded-full size-11 flex items-center justify-center shadow-none'>
-                      <Watch className='size-5 text-purple-600' />
+                      <Watch className='size-5 text-black' />
                     </div>
                     <CardContent className='p-0 space-y-3 flex-1'>
-                      <h3 className='text-lg font-semibold text-purple-700'>
-                        Energy-aligned Work
+                      <h3 className='text-lg font-semibold text-black'>
+                        Learning starts with clarity, not pressure.
                       </h3>
-                      <p className='text-sm text-purple-600'>
-                        The right task surfaces at the right time, no decision
-                        fatigue or wasted effort.
+                      <p className='text-sm text-black'>
+                        Tasks and content meet you where your energy is, not
+                        where a rigid timetable expects you to be. You’re
+                        encouraged to engage deeply when you have capacity, and
+                        to pause without penalty when you don’t.
                       </p>
                     </CardContent>
                   </Card>
@@ -672,17 +1048,19 @@ export default function page() {
                   variants={fadeInUp}
                   className='sm:col-span-2 h-full'
                 >
-                  <Card className='rounded-xl h-full flex flex-col bg-amber-50 p-5 border border-muted/20 shadow-none '>
+                  <Card className='rounded-xl h-full flex flex-col bg-[#f6fddd] p-5 border border-muted/20 shadow-none '>
                     <div className='bg-white rounded-full size-11 flex items-center justify-center shadow-none'>
-                      <Moon className='size-5 text-amber-700' />
+                      <Moon className='size-5 text-black' />
                     </div>
                     <CardContent className='p-0 space-y-3 flex-1'>
-                      <h3 className='text-lg font-semibold text-amber-800'>
-                        Protected focus
+                      <h3 className='text-lg font-semibold text-black'>
+                        The result isn’t more effort, it’s better timing.
                       </h3>
-                      <p className='text-sm text-amber-700'>
-                        Deep work is carved out in your peak hours, not squeezed
-                        into scraps of time.
+                      <p className='text-sm text-black'>
+                        Distractions are reduced by design. You’re not pulled in
+                        multiple directions or overwhelmed with information.
+                        Learning sessions feel intentional and contained,
+                        allowing your attention to settle and stay.
                       </p>
                     </CardContent>
                   </Card>
@@ -692,17 +1070,21 @@ export default function page() {
                   variants={fadeInUp}
                   className='sm:col-span-3 h-full'
                 >
-                  <Card className='rounded-xl h-full flex flex-col bg-pink-50 p-5 border border-muted/20 shadow-none '>
+                  <Card className='rounded-xl h-full flex flex-col bg-[#e9fee4] p-5 border border-muted/20 shadow-none '>
                     <div className='bg-white rounded-full size-11 flex items-center justify-center shadow-none'>
-                      <Waves className='size-5 text-pink-600' />
+                      <Waves className='size-5 text-black' />
                     </div>
                     <CardContent className='p-0 space-y-3 flex-1'>
-                      <h3 className='text-lg font-semibold text-pink-700'>
-                        Daily improved efficiency
+                      <h3 className='text-lg font-semibold text-black'>
+                        For once, focus feels supported rather than demanded.
                       </h3>
-                      <p className='text-sm text-pink-600'>
-                        Close each day with a &apos;done&apos; list instead of
-                        backlog guilt—small wins compound.
+                      <p className='text-sm text-black'>
+                        Your effort translates into visible capability. Skills
+                        build gradually, achievements are recognised, and your
+                        learning journey makes sense when you look back on it.
+                        Progress isn’t measured by speed or comparison, it’s
+                        measured by understanding and confidence. You finish
+                        learning sessions knowing what you’ve gained.
                       </p>
                     </CardContent>
                   </Card>
