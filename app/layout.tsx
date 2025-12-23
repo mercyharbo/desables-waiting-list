@@ -34,7 +34,7 @@ export const metadata: Metadata = {
     type: 'website',
     images: [
       {
-        url: '/asset/favicon.ico',
+        url: '/favicon4.png',
         width: 512,
         height: 512,
         alt: 'Desables logo',
@@ -46,12 +46,12 @@ export const metadata: Metadata = {
     title: 'Desables — Accessible learning for people with disabilities',
     description:
       'Inclusive courses, accessible resources and tools for learners with disabilities.',
-    images: ['/asset/favicon.ico'],
+    images: ['/favicon4.png'],
   },
   icons: {
-    icon: '/asset/favicon.ico',
-    shortcut: '/asset/favicon.ico',
-    apple: '/asset/favicon.ico',
+    icon: '/favicon4.png',
+    shortcut: '/favicon4.png',
+    apple: '/favicon4.png',
   },
   robots: {
     index: true,

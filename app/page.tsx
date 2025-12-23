@@ -3,11 +3,12 @@
 import { Button } from '@/components/ui/button'
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
 import WaitlistDialog from '@/components/waitlist-dialog'
+import { faqsData } from '@/lib/faq'
 import { AnimatePresence, motion } from 'framer-motion'
 import { ChevronDown, Eye, Heart, Target } from 'lucide-react'
+import Image from 'next/image'
 import Link from 'next/link'
 import { useState } from 'react'
-import Marquee from 'react-fast-marquee'
 
 const fadeInUp = {
   initial: { opacity: 0, y: 20 },
@@ -23,56 +24,7 @@ const staggerContainer = {
   },
 }
 
-const faqData = [
-  {
-    question: 'What is Desables?',
-    answer:
-      'Desables is a digital learning platform designed to provide accessible and personalized tech education for people with disabilities. We prioritize accessibility and ensure that ability always comes first.',
-  },
-  {
-    question: 'When will Desables launch?',
-    answer:
-      'We are currently in development and plan to launch soon. Join our waitlist to be among the first to know when we go live and get early access to our platform.',
-  },
-  // {
-  //   question: 'Is Desables free to use?',
-  //   answer:
-  //     'We will offer both free and premium tiers to ensure accessibility for everyone. More details about pricing will be shared closer to our launch date.',
-  // },
-  {
-    question: 'What types of tech skills will be covered?',
-    answer:
-      'Our platform will cover a wide range of tech skills including web development, programming, data science, and more. All content is designed with accessibility in mind.',
-  },
-  {
-    question: 'How is Desables different from other learning platforms?',
-    answer:
-      'Desables is built from the ground up with accessibility at its core. We design with users with disabilities, not just for them, ensuring that every feature is inclusive and adaptable to individual needs.',
-  },
-]
-
-const extraFaqs = [
-  {
-    question: 'How can I join the waitlist?',
-    answer:
-      'You can join the waitlist by adding your name and email in the form above — we’ll email you when early access opens.',
-  },
-  {
-    question: 'Will Desables offer certificates?',
-    answer:
-      'Yes — we plan to provide certificates for completed courses, with extra options on premium tiers.',
-  },
-  {
-    question: 'What accessibility standards do you follow?',
-    answer:
-      'We follow WCAG guidance and test with assistive technologies and users with disabilities throughout development.',
-  },
-  {
-    question: 'Can organisations partner with Desables?',
-    answer:
-      'Yes — we welcome partnerships. Reach out to partnerships@desables.org to start a conversation.',
-  },
-]
+const initialFaqCount = 4
 
 export default function Home() {
   const [openIndex, setOpenIndex] = useState<number | null>(null)
@@ -84,7 +36,7 @@ export default function Home() {
     setOpenIndex(null)
   }
 
-  const visibleFaqs = showMore ? faqData.concat(extraFaqs) : faqData
+  const visibleFaqs = showMore ? faqsData : faqsData.slice(0, initialFaqCount)
 
   const toggleFAQ = (index: number) => {
     setOpenIndex(openIndex === index ? null : index)
@@ -94,11 +46,11 @@ export default function Home() {
     <main className=' '>
       <section
         id='early-access'
-        className='relative py-20 lg:py-32 overflow-hidden mx-auto max-w-7xl px-6'
+        className='relative lg:h-[80vh] xl:h-[80vh] md:h-[60vh] md:px-10 overflow-hidden w-full lg:px-16 px-5  grid grid-cols-1 lg:grid-cols-2 gap-5'
       >
-        <div className='mx-auto max-w-5xl text-center space-y-8'>
+        <div className='space-y-8 w-full flex flex-col justify-center items-start xl:max-w-4xl lg:max-w-4xl 2xl:max-w-3xl'>
           {/* Decorative badge */}
-          <Marquee >
+          {/* <Marquee >
             <div className='flex items-center gap-5'>
               <span className='text-sm font-semibold uppercase text-primary'>
                 Now accepting early access applications
@@ -107,14 +59,14 @@ export default function Home() {
                 Now accepting early access applications
               </span>
             </div>
-          </Marquee>
+          </Marquee> */}
 
           {/* Main heading with gradient */}
           <motion.h1
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.1 }}
-            className='text-4xl/tight sm:text-5xl/tight lg:text-7xl/tight font-bold'
+            className='text-4xl/snug md:text-5xl/snug 2xl:text-6xl/snug xl:text-4xl/snug lg:text-4xl/snug font-bold'
           >
             <span className='bg-linear-to-br from-primary via-primary to-primary/70 bg-clip-text text-transparent'>
               Accessible learning
@@ -130,7 +82,7 @@ export default function Home() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className='text-gray-600 dark:text-gray-400 text-lg lg:text-xl max-w-3xl mx-auto leading-relaxed'
+            className='text-gray-600 dark:text-gray-400 text-lg lg:text-lg 2xl:text-xl leading-relaxed'
           >
             We are building a digital learning platform that equips people with
             disabilities with accessible and personalised tech skills. We
@@ -142,23 +94,31 @@ export default function Home() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.3 }}
-            className='flex flex-col sm:flex-row items-center justify-center gap-4 pt-4'
+            className='flex flex-col sm:flex-row items-center justify-start gap-4 pt-4 w-full lg:w-fit'
           >
-            <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
+            <motion.div
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              className='w-full lg:w-fit'
+            >
               <Button
                 onClick={() => setDialogOpen(true)}
                 size='lg'
-                className='rounded-full h-14 px-10 text-white dark:text-black text-sm font-semibold'
+                className='rounded-full h-12 w-full lg:w-fit px-10 text-white dark:text-black text-sm font-semibold'
               >
                 Get early access
               </Button>
             </motion.div>
-            <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
+            <motion.div
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              className='w-full lg:w-fit'
+            >
               <Link href='/science'>
                 <Button
                   size='lg'
                   variant='outline'
-                  className='rounded-full h-14 px-10 text-sm dark:text-white font-semibold hover:bg-muted/10! hover:border-muted/20! hover:text-black dark:hover:text-white bg-muted/5! transition-all'
+                  className='rounded-full h-12 w-full lg:w-fit px-10 text-sm dark:text-white font-semibold hover:bg-muted/10! hover:border-muted/20! hover:text-black dark:hover:text-white bg-muted/5! transition-all'
                 >
                   Science behind Desables
                 </Button>
@@ -171,27 +131,40 @@ export default function Home() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.4 }}
-            className='pt-12 flex flex-wrap items-center justify-center gap-8 text-sm text-muted-foreground'
+            className='flex flex-col lg:flex-row items-start flex-wrap justify-center lg:justify-start gap-5 text-sm text-muted-foreground'
           >
             <div className='flex items-center gap-2'>
               <Heart className='size-4 text-primary fill-primary dark:text-primary dark:fill-primary' />
-              <span className='font-medium'>
-                Built with accessibility first
-              </span>
+              <span className='font-medium'>Neuroinclusive by design</span>
             </div>
             <div className='flex items-center gap-2'>
               <Heart className='size-4 text-primary fill-primary dark:text-primary dark:fill-primary' />
               <span className='font-medium'>
-                Built with accessibility first
+                Structured for focus and clarity{' '}
               </span>
             </div>
             <div className='flex items-center gap-2'>
               <Heart className='size-4 text-primary fill-primary dark:text-primary dark:fill-primary' />
-              <span className='font-medium'>
-                Built with accessibility first
-              </span>
+              <span className='font-medium'>Built for real-world outcomes</span>
             </div>
           </motion.div>
+        </div>
+
+        <div className='absolute xl:-right-36 top-0 2xl:w-2/3 xl:w-[55%] lg:w-[55%] h-full hidden lg:block'>
+          <Image
+            src={'/hero-light.png'}
+            alt='hero image'
+            priority
+            fill
+            className='object-contain block dark:hidden'
+          />
+          <Image
+            src={'/hero-dark.png'}
+            alt='hero image'
+            priority
+            fill
+            className='object-contain hidden dark:block'
+          />
         </div>
       </section>
 
@@ -339,7 +312,7 @@ export default function Home() {
                         openIndex === index ? 'text-primary' : ''
                       }`}
                     >
-                      {faq.question}
+                      {faq.title}
                     </span>
                     <motion.div
                       animate={{ rotate: openIndex === index ? 180 : 0 }}

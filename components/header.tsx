@@ -12,20 +12,19 @@ export default function Header() {
 
   const { theme, resolvedTheme } = useTheme()
   const [mounted, setMounted] = useState(false)
-  const [imgSrc, setImgSrc] = useState('/Group.svg')
+  const [fallbackSrc, setFallbackSrc] = useState<string | null>(null)
 
   useEffect(() => {
-    setMounted(true)
+    const id = setTimeout(() => setMounted(true), 0)
+    return () => clearTimeout(id)
   }, [])
 
-  useEffect(() => {
-    const current = theme === 'system' ? resolvedTheme : theme
-    if (!mounted) return
-    setImgSrc(current === 'dark' ? '/Group.svg' : '/light-logo.svg')
-  }, [theme, resolvedTheme, mounted])
+  const current = theme === 'system' ? resolvedTheme : theme
+  const imgSrc =
+    fallbackSrc ?? (mounted ? (current === 'dark' ? '/Group.svg' : '/light-logo.svg') : '/Group.svg')
 
   return (
-    <div className='mx-auto max-w-7xl px-6 py-8 flex items-center justify-between'>
+    <div className='mx-auto lg:px-16 px-6 py-8 flex items-center justify-between'>
       <Link
         href='/'
         aria-label='Desables home'
@@ -38,7 +37,7 @@ export default function Header() {
           height={32}
           className='h-8 w-full object-cover'
           priority
-          onError={() => setImgSrc('/logo.png')}
+          onError={() => setFallbackSrc('/logo.png')}
         />
         <span className='sr-only'>Desables</span>
       </Link>
