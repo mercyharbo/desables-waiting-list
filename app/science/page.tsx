@@ -35,36 +35,34 @@ const staggerContainer = {
 
 export default function page() {
   return (
-    <main className='space-y-10 pt-16'>
+    <main className='space-y-10 '>
       {/* Enhanced Hero Section */}
-      <section className='relative mx-auto max-w-5xl text-center px-6 py-12'>
-        {/* Decorative corner accents */}
-        <div className='absolute top-0 left-0 w-20 h-20 border-l-4 border-t-4 border-primary rounded-tl-2xl' />
-        <div className='absolute bottom-0 right-0 w-20 h-20 border-r-4 border-b-4 border-primary rounded-br-2xl' />
+      <section className='relative text-center  bg-primary-alt h-[70vh] overflow-hidden'>
+        {/* Phone mockup (center bottom) */}
+        <div className='absolute left-1/2 bottom-0 transform -translate-x-1/2 z-0 pointer-events-none'>
+          <Image
+            src='/desables-phone--light-mode.png'
+            width={500}
+            height={640}
+            alt='Desables phone'
+            className='object-contain'
+          />
+        </div>
 
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
-          className='space-y-6'
+          className='space-y-6 relative h-full flex flex-col justify-center items-center z-10 px-6 py-8'
         >
-          {/* Badge */}
-          {/* <motion.div
-            initial={{ opacity: 0, scale: 0.9 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.5, delay: 0.2 }}
-            className='inline-flex items-center gap-2'
-          >
-            <span className='text-sm font-semibold text-primary'>
-              The Science Behind Desables
-            </span>
-          </motion.div> */}
+          {/* Overlay behind text */}
+          <div className='absolute inset-0 bg-black/70 h-full w-full dark:bg-black/65 -z-10' />
 
           <motion.h1
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.3 }}
-            className='text-4xl sm:text-5xl lg:text-6xl font-bold text-black dark:text-white leading-tight'
+            className='text-4xl sm:text-5xl lg:text-6xl font-bold text-white leading-tight'
           >
             The Science Behind Desables
           </motion.h1>
@@ -73,21 +71,18 @@ export default function page() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.6, delay: 0.4 }}
-            className='relative'
+            className='relative z-20 flex items-center justify-center gap-0'
           >
-            <div className='absolute inset-0 flex items-center justify-center'>
-              <div className='w-1/3 h-px bg-primary/30' />
-            </div>
-            <div className='relative flex justify-center'>
-              <div className='size-3 bg-primary rounded-full' />
-            </div>
+            <div className='h-px w-20 bg-white rounded-full' />
+            <div className='size-3 bg-white rounded-full  shrink-0' />
+            <div className='h-px w-20 bg-white rounded-full ' />
           </motion.div>
 
           <motion.p
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.5 }}
-            className='text-lg lg:text-xl dark:text-gray-300 text-gray-600 leading-relaxed max-w-3xl mx-auto'
+            className='text-lg lg:text-xl text-white leading-relaxed max-w-3xl mx-auto'
           >
             Desables is built on decades of evidence from cognitive science,
             neurodiversity research, and inclusive education design. These
@@ -102,7 +97,7 @@ export default function page() {
       </section>
 
       {/* smart section */}
-      <section className='mx-auto max-w-7xl border rounded-xl px-6 py-12 bg-white/5 dark:bg-black/20 backdrop-blur-sm'>
+      <section className='mx-auto max-w-7xl border-l-4 border-primary rounded-r-xl px-8 py-12 bg-white/5 dark:bg-black/20 shadow-sm'>
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -176,7 +171,7 @@ export default function page() {
         </motion.div>
       </section>
 
-      <section className='mx-auto max-w-7xl border rounded-xl px-6 py-12 bg-white/5 dark:bg-black/20 backdrop-blur-sm'>
+      <section className='mx-auto max-w-7xl rounded-2xl px-8 py-12 bg-white/5 dark:bg-black/20 shadow-lg'>
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -238,7 +233,7 @@ export default function page() {
         </motion.div>
       </section>
 
-      <section className='mx-auto max-w-7xl border rounded-xl px-6 py-12 bg-white/5 dark:bg-black/20 backdrop-blur-sm'>
+      <section className='mx-auto max-w-7xl border-t-4 border-primary rounded-b-xl px-8 py-12 bg-white/5 dark:bg-black/20 shadow-sm'>
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -298,7 +293,7 @@ export default function page() {
         </motion.div>
       </section>
 
-      <section className='mx-auto max-w-7xl border rounded-xl px-6 py-12 bg-white/5 dark:bg-black/20 backdrop-blur-sm'>
+      <section className='mx-auto max-w-7xl rounded-2xl px-8 py-12 bg-white/10 dark:bg-black/30 shadow-md'>
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -357,7 +352,7 @@ export default function page() {
         </motion.div>
       </section>
 
-      <section className='mx-auto max-w-7xl border rounded-xl px-6 py-12 bg-white/5 dark:bg-black/20 backdrop-blur-sm'>
+      <section className='mx-auto max-w-7xl border-r-4 border-primary rounded-l-xl px-8 py-12 bg-white/5 dark:bg-black/20 shadow-sm'>
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -414,7 +409,7 @@ export default function page() {
         </motion.div>
       </section>
 
-      <section className='mx-auto max-w-7xl border rounded-xl px-6 py-12'>
+      <section className='mx-auto max-w-7xl border border-primary/20 rounded-xl px-8 py-12 shadow-md hover:shadow-lg transition-shadow'>
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
