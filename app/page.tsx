@@ -47,7 +47,7 @@ export default function Home() {
     <main className=' '>
       <section
         id='early-access'
-        className='relative py-10 md:px-10 overflow-hidden w-full lg:px-16 px-5  grid grid-cols-1 lg:grid-cols-2 gap-5'
+        className='relative py-16 md:px-10 overflow-hidden w-full lg:px-16 px-5  grid grid-cols-1 lg:grid-cols-2 gap-5'
       >
         <div className='gap-4 w-full flex flex-col justify-center items-start xl:max-w-4xl 3xl:max-w-4xl lg:max-w-4xl 2xl:max-w-4xl'>
           {/* Main heading with gradient */}
