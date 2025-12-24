@@ -47,15 +47,15 @@ export default function Home() {
     <main className=' '>
       <section
         id='early-access'
-        className='relative lg:h-[75vh] xl:h-[70vh] md:h-[50vh] md:px-10 overflow-hidden w-full lg:px-16 px-5  grid grid-cols-1 lg:grid-cols-2 gap-5'
+        className='relative py-10 md:px-10 overflow-hidden w-full lg:px-16 px-5  grid grid-cols-1 lg:grid-cols-2 gap-5'
       >
-        <div className='space-y-8 w-full flex flex-col justify-center items-start xl:max-w-4xl lg:max-w-4xl 2xl:max-w-4xl'>
+        <div className='gap-4 w-full flex flex-col justify-center items-start xl:max-w-4xl 3xl:max-w-4xl lg:max-w-4xl 2xl:max-w-4xl'>
           {/* Main heading with gradient */}
           <motion.h1
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.1 }}
-            className='text-4xl/snug md:text-5xl/snug 2xl:text-6xl/snug xl:text-4xl/snug lg:text-4xl/snug font-bold'
+            className='text-4xl/snug md:text-5xl/snug 2xl:text-[70px]/snug 3xl:text-[80px]/snug xl:text-5xl/snug lg:text-5xl/snug font-bold'
           >
             <span className='bg-linear-to-br from-primary via-primary to-primary/70 bg-clip-text text-transparent'>
               Learning designed for
@@ -137,7 +137,7 @@ export default function Home() {
           </motion.div>
         </div>
 
-        <div className='absolute xl:-right-36 top-0 2xl:w-[55%] xl:w-[50%] lg:w-[50%] h-full hidden lg:block'>
+        <div className='absolute xl:-right-36 top-0 3xl:w-[50%] 2xl:w-[55%] xl:w-[50%] lg:w-[50%] h-full hidden lg:block'>
           <Image
             src={'/hero-light.png'}
             alt='hero image'
@@ -166,7 +166,7 @@ export default function Home() {
           <h2 className='text-4xl lg:text-5xl font-bold dark:text-black text-white'>
             Why We Exist
           </h2>
-          <p className='text-lg lg:text-xl dark:text-gray-700 text-gray-300'>
+          <p className='text-lg lg:text-xl dark:text-gray-800 text-white'>
             Most learning systems were not designed with different ways of
             thinking in mind. They reward speed, conformity, and endurance,
             often mistaking these for ability. For autistic and ADHD learners,
@@ -174,10 +174,10 @@ export default function Home() {
             because of a lack of talent, but because the environment was never
             built to support how they learn and work.
           </p>
-          <p className='text-lg lg:text-xl dark:text-gray-700 text-gray-300'>
+          <p className='text-lg lg:text-xl dark:text-gray-800 text-white'>
             Desables exists to challenge that pattern.
           </p>
-          <p className='text-lg lg:text-xl dark:text-gray-700 text-gray-300'>
+          <p className='text-lg lg:text-xl dark:text-gray-800 text-white'>
             We believe that when learning environments are designed with
             intention, care, and respect for neurodivergent experiences, ability
             becomes visible. Barriers are reduced. Confidence grows. And
@@ -208,7 +208,7 @@ export default function Home() {
                 </CardTitle>
               </CardHeader>
               <CardContent>
-                <p className='text-gray-300 leading-relaxed'>
+                <p className='text-white leading-relaxed'>
                   To design neuroinclusive learning pathways that respect how
                   different minds focus, process, and grow, enabling autistic
                   and ADHD learners to develop meaningful digital skills and
@@ -233,7 +233,7 @@ export default function Home() {
                 </CardTitle>
               </CardHeader>
               <CardContent>
-                <p className='text-gray-300 leading-relaxed'>
+                <p className='text-white leading-relaxed'>
                   A future where access to digital skills education is not
                   determined by how well someone fits traditional systems, but
                   by the quality of the environments created to support diverse
@@ -261,7 +261,7 @@ export default function Home() {
                 </CardTitle>
               </CardHeader>
               <CardContent>
-                <ul className='list-disc list-inside space-y-1 text-left text-gray-600 dark:text-gray-300'>
+                <ul className='list-disc list-inside space-y-1 text-left text-white'>
                   <li>Design with, not for</li>
                   <li>Ability over conformity</li>
                   <li>Care before scale</li>

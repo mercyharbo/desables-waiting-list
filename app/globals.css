@@ -84,6 +84,8 @@
   --font-display: var(--font-schibsted-grotesk), sans-serif;
   --font-body: var(--font-host-grotesk), sans-serif;
   --color-light-foreground: var(--light-gray-foreground);
+
+  --breakpoint-3xl: 120rem;
 }
 
 /* 🌞 LIGHT THEME */

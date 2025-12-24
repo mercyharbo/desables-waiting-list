@@ -42,7 +42,7 @@ export default function page() {
         <div className='absolute left-1/2 bottom-0 transform -translate-x-1/2 z-0 pointer-events-none'>
           <Image
             src='/desables-phone--light-mode.png'
-            width={500}
+            width={700}
             height={640}
             alt='Desables phone'
             className='object-contain'
@@ -71,7 +71,7 @@ export default function page() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.6, delay: 0.4 }}
-            className='relative z-20 flex items-center justify-center gap-0'
+            className='relative z-20 flex items-center justify-center gap-2'
           >
             <div className='h-px w-20 bg-white rounded-full' />
             <div className='size-3 bg-white rounded-full  shrink-0' />
