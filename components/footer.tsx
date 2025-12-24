@@ -62,7 +62,7 @@ export default function FooterComp() {
             className='flex items-center gap-4'
           >
             <Link
-              href='https://twitter.com'
+              href='https://x.com/Desables_'
               target='_blank'
               rel='noopener noreferrer'
               aria-label='Follow us on Twitter'
@@ -71,7 +71,7 @@ export default function FooterComp() {
               <Twitter className='size-5 dark:text-gray-300 text-gray-600 group-hover:text-primary transition-colors' />
             </Link>
             <Link
-              href='https://instagram.com'
+              href='https://www.instagram.com/desables_/'
               target='_blank'
               rel='noopener noreferrer'
               aria-label='Follow us on Instagram'
@@ -80,7 +80,7 @@ export default function FooterComp() {
               <Instagram className='size-5 dark:text-gray-300 text-gray-600 group-hover:text-primary transition-colors' />
             </Link>
             <Link
-              href='https://linkedin.com'
+              href='https://www.linkedin.com/company/desables/'
               target='_blank'
               rel='noopener noreferrer'
               aria-label='Follow us on LinkedIn'

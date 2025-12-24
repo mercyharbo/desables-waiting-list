@@ -483,115 +483,8 @@ export default function page() {
 
           {/* Story Content in Sections */}
           <div className='space-y-10'>
-            {/* Opening Statement */}
-            <motion.div
-              initial={{ opacity: 0, x: -20 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: 0.2 }}
-              className='relative pl-6 border-l-4 border-primary'
-            >
-              <p className='text-lg lg:text-xl dark:text-white text-black leading-relaxed'>
-                The internet gave us a door, but lots of people never got a key.
-                We started Desables after watching brilliant people stall—not
-                for lack of talent, but because the product didn&apos;t fit
-                them.
-              </p>
-            </motion.div>
-
-            {/* Grid of Key Points */}
-            <div className='grid lg:grid-cols-2 gap-8'>
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.6, delay: 0.3 }}
-                className='space-y-4'
-              >
-                <div className='flex items-start gap-3'>
-                  <div className='size-2 bg-primary rounded-full shrink-0 mt-2' />
-                  <div className='space-y-2'>
-                    <h3 className='dark:text-white text-black font-bold text-lg'>
-                      Co-Design, Not Retrofit
-                    </h3>
-                    <p className='text-gray-600 dark:text-gray-300 leading-relaxed'>
-                      From the first sketch to the final release, we co-design
-                      with disabled creators. Every course is shaped by lived
-                      experience, not retrofitted to tick a box.
-                    </p>
-                  </div>
-                </div>
-              </motion.div>
-
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.6, delay: 0.4 }}
-                className='space-y-4'
-              >
-                <div className='flex items-start gap-3'>
-                  <div className='size-2 bg-primary rounded-full shrink-0 mt-2' />
-                  <div className='space-y-2'>
-                    <h3 className='dark:text-white text-black font-bold text-lg'>
-                      Rigorous Standards
-                    </h3>
-                    <p className='text-gray-600 dark:text-gray-300 leading-relaxed'>
-                      Nothing goes live until it clears an accessibility gate
-                      aligned to WCAG 2.2 AA. Assessment is flexible but
-                      rigorous—we care about evidence, not watch-time.
-                    </p>
-                  </div>
-                </div>
-              </motion.div>
-
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.6, delay: 0.5 }}
-                className='space-y-4'
-              >
-                <div className='flex items-start gap-3'>
-                  <div className='size-2 bg-primary rounded-full shrink-0 mt-2' />
-                  <div className='space-y-2'>
-                    <h3 className='dark:text-white text-black font-bold text-lg'>
-                      Portable Credentials
-                    </h3>
-                    <p className='text-gray-600 dark:text-gray-300 leading-relaxed'>
-                      Learners leave with portable, verifiable credentials that
-                      travel beyond our walls, so opportunity doesn&apos;t end
-                      at the edge of the platform.
-                    </p>
-                  </div>
-                </div>
-              </motion.div>
-
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.6, delay: 0.6 }}
-                className='space-y-4'
-              >
-                <div className='flex items-start gap-3'>
-                  <div className='size-2 bg-primary rounded-full shrink-0 mt-2' />
-                  <div className='space-y-2'>
-                    <h3 className='dark:text-white text-black font-bold text-lg'>
-                      Human-Centered Learning
-                    </h3>
-                    <p className='text-gray-600 dark:text-gray-300 leading-relaxed'>
-                      Progress is steady, human, and shame-free. Pause without
-                      penalty, switch formats without friction, and try again
-                      without losing face.
-                    </p>
-                  </div>
-                </div>
-              </motion.div>
-            </div>
-
             {/* Highlighted Box */}
-            <motion.div
+            {/* <motion.div
               initial={{ opacity: 0, scale: 0.95 }}
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true }}
@@ -620,10 +513,10 @@ export default function page() {
                   are earned by shipping work, not by clicking through videos.
                 </p>
               </div>
-            </motion.div>
+            </motion.div> */}
 
             {/* Mission Statement */}
-            <motion.div
+            {/* <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
@@ -643,6 +536,159 @@ export default function page() {
                 This isn&apos;t charity; it&apos;s better product. When the
                 product fits more people, more people finish, and more people
                 get hired. That&apos;s the point.
+              </p>
+            </motion.div> */}
+
+            {/* Problem */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6, delay: 0.9 }}
+              className='bg-white/5 dark:bg-black/20 border rounded-xl p-6 lg:p-8 space-y-4'
+            >
+              <h4 className='text-xl font-semibold dark:text-white text-black'>
+                The Problem
+              </h4>
+
+              <p className='text-lg dark:text-gray-300 text-gray-600 leading-relaxed'>
+                We kept seeing the same pattern.
+              </p>
+
+              <p className='text-lg dark:text-gray-300 text-gray-600 leading-relaxed'>
+                Autistic and ADHD learners with clear ability and genuine
+                interest were not falling behind because they lacked
+                intelligence or motivation. They were struggling because the
+                systems designed to teach digital and creative skills were not
+                built around how they think, focus, regulate energy, or process
+                information.
+              </p>
+
+              <p className='text-lg dark:text-gray-300 text-gray-600 leading-relaxed'>
+                Most learning platforms still prioritise speed, constant
+                engagement, and cognitive endurance. They assume learners can
+                navigate dense interfaces, unclear expectations, rigid
+                timelines, and high-pressure assessments without cost. Even when
+                rewards are added, they are often tied to completion and
+                visibility rather than understanding or sustainability.
+              </p>
+
+              <p className='text-lg dark:text-gray-300 text-gray-600 leading-relaxed'>
+                For many neurodivergent learners, this misalignment leads to
+                exhaustion, disengagement, or leaving education altogether. Not
+                because learning is inaccessible, but because the environment
+                is.
+              </p>
+
+              <p className='text-lg dark:text-gray-300 text-gray-600 leading-relaxed font-semibold'>
+                The problem was not the learner. <br />
+                It was the system.
+              </p>
+            </motion.div>
+
+            {/* Solution */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6, delay: 1.0 }}
+              className='bg-primary/10 border-l-4 border-primary rounded-r-2xl p-6 lg:p-8 space-y-4'
+            >
+              <h4 className='text-xl font-semibold dark:text-white text-black'>
+                The Solution
+              </h4>
+
+              <p className='text-lg dark:text-gray-300 text-gray-600 leading-relaxed'>
+                Desables was created to redesign the learning environment
+                itself.
+              </p>
+
+              <p className='text-lg dark:text-gray-300 text-gray-600 leading-relaxed'>
+                Rather than pushing learners to adapt, Desables adapts to how
+                learners actually think and learn. The platform is built around
+                clarity, flexibility, and dignity, reducing cognitive overload
+                and supporting focus, pacing, and confidence.
+              </p>
+
+              <p className='text-lg dark:text-gray-300 text-gray-600 leading-relaxed'>
+                Progress on Desables is not measured by speed or constant
+                activity. Learners are recognised for understanding, applied
+                skills, and meaningful growth. Badges and certificates are not
+                used to pressure or compete, they serve as evidence of
+                capability that learners can trust and carry forward.
+              </p>
+
+              <p className='text-lg dark:text-gray-300 text-gray-600 leading-relaxed font-semibold'>
+                Learning becomes sustainable, visible, and aligned with real
+                outcomes.
+              </p>
+            </motion.div>
+
+            {/* Founder’s Story */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6, delay: 1.1 }}
+              className='bg-white/5 dark:bg-black/20 border rounded-xl p-6 lg:p-8 space-y-4'
+            >
+              <h4 className='text-xl font-semibold dark:text-white text-black'>
+                The Founder&apos;s Story
+              </h4>
+
+              <p className='text-lg dark:text-gray-300 text-gray-600 leading-relaxed'>
+                I didn&apos;t turn to Desables because I wanted to build a
+                platform. I came to it because I kept seeing the same outcome.
+                Desables grew from years of working alongside neurodivergent
+                learners.
+              </p>
+
+              <p className='text-lg dark:text-gray-300 text-gray-600 leading-relaxed'>
+                Again and again, the same truths became clear. When the
+                environment was supportive, these learners thrived. When it was
+                rigid or overwhelming, the same learners disengaged, not from
+                lack of ability, but from systems that misunderstood them.
+              </p>
+
+              <p className='text-lg dark:text-gray-300 text-gray-600 leading-relaxed'>
+                The issue was never effort or intelligence. It was design.
+              </p>
+
+              <p className='text-lg dark:text-gray-300 text-gray-600 leading-relaxed font-semibold'>
+                Desables exists because too many capable people are excluded not
+                by their minds, but by systems that refuse to make space for
+                difference.
+              </p>
+            </motion.div>
+
+            {/* Our Big Bet */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6, delay: 1.2 }}
+              className='bg-primary/10 border-l-4 border-primary rounded-r-2xl p-6 lg:p-8 space-y-4'
+            >
+              <h4 className='text-xl font-semibold dark:text-white text-black'>
+                Our Big Bet
+              </h4>
+
+              <p className='text-lg dark:text-gray-300 text-gray-600 leading-relaxed'>
+                We believe that ability flourishes when learning environments
+                respect cognitive diversity.
+              </p>
+
+              <p className='text-lg dark:text-gray-300 text-gray-600 leading-relaxed'>
+                Our belief is simple. When systems are designed with clarity,
+                flexibility, and care, neurodivergent learners do not need to be
+                fixed, pushed, or motivated. They succeed because the
+                environment finally fits.
+              </p>
+
+              <p className='text-lg dark:text-gray-300 text-gray-600 leading-relaxed font-semibold'>
+                Desables is built on the belief that inclusive design is not a
+                compromise, it is a competitive advantage, for learners,
+                employers, and the future of work.
               </p>
             </motion.div>
           </div>
@@ -708,10 +754,11 @@ export default function page() {
                       </div>
                     </div>
                     <h3 className='text-white font-bold text-lg'>
-                      Learner-Centered
+                      Builts for different minds{' '}
                     </h3>
                     <p className='text-gray-400 text-sm'>
-                      Your voice shapes every decision we make
+                      Designed for different ways of thinking, from the ground
+                      up.
                     </p>
                   </div>
 
@@ -722,10 +769,11 @@ export default function page() {
                       </div>
                     </div>
                     <h3 className='text-white font-bold text-lg'>
-                      Accessible First
+                      Learners Shape Desables
                     </h3>
                     <p className='text-gray-400 text-sm'>
-                      Built for everyone, from the ground up
+                      Your voice shapes how we design, improve, and evolve the
+                      platform.
                     </p>
                   </div>
 
@@ -736,10 +784,11 @@ export default function page() {
                       </div>
                     </div>
                     <h3 className='text-white font-bold text-lg'>
-                      Career-Ready
+                      Skills That Travel With You.
                     </h3>
                     <p className='text-gray-400 text-sm'>
-                      Skills that unlock real opportunities
+                      Skills that unlock real opportunities, recognised beyond
+                      Desables.
                     </p>
                   </div>
                 </motion.div>
@@ -786,10 +835,10 @@ export default function page() {
                 </CardHeader>
                 <CardContent>
                   <p className='text-gray-300 leading-relaxed'>
-                    People with disabilities seeking accessible, practical
-                    digital skills training. We design courses that work with
-                    your abilities, not against them, ensuring you can learn
-                    effectively and build real-world skills.
+                    Disabled and neurodivergent learners seeking accessible,
+                    practical digital skills training. We design courses that
+                    work with your abilities, not against them, ensuring you can
+                    learn effectively and build real-world skills.
                   </p>
                 </CardContent>
               </Card>
@@ -811,15 +860,15 @@ export default function page() {
                     <Building className='size-6' />
                   </motion.div>
                   <CardTitle className='text-xl text-white'>
-                    Employers
+                    Partners & Creators
                   </CardTitle>
                 </CardHeader>
                 <CardContent>
                   <p className='text-gray-300 leading-relaxed'>
-                    Organizations looking to build diverse, inclusive teams. Our
-                    portable credentials help you identify talent with real
-                    skills, while our platform ensures your workforce
-                    development is accessible to everyone.
+                    Disability organisations, educators, and content creators
+                    who share our vision. We collaborate to build better
+                    accessibility standards and create content that serves the
+                    disabled and neurodivergent communities.
                   </p>
                 </CardContent>
               </Card>
