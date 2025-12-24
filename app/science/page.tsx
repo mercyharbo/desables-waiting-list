@@ -45,7 +45,7 @@ export default function page() {
             width={700}
             height={640}
             alt='Desables phone'
-            className='object-contain'
+            className='object-cover w-175 h-75 lg:w-175  '
           />
         </div>
 
@@ -97,7 +97,7 @@ export default function page() {
       </section>
 
       {/* smart section */}
-      <section className='mx-auto max-w-7xl border-l-4 border-primary rounded-r-xl px-8 py-12 bg-white/5 dark:bg-black/20 shadow-sm'>
+      <section className='mx-auto lg:max-w-7xl w-[90%]   border-l-4 border-primary rounded-r-xl px-8 py-12 bg-white/5 dark:bg-black/20 shadow-sm'>
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -121,7 +121,7 @@ export default function page() {
               href='https://www.health.harvard.edu/blog/what-is-neurodiversity-202111162645'
               target='_blank'
               rel='noopener noreferrer'
-              className='text-primary underline'
+              className='text-primary underline break-words break-all'
             >
               https://www.health.harvard.edu/blog/what-is-neurodiversity-202111162645
             </Link>
@@ -132,7 +132,7 @@ export default function page() {
               href='https://www.bps.org.uk/psychologist/neurodiversity'
               target='_blank'
               rel='noopener noreferrer'
-              className='text-primary underline'
+              className='text-primary underline break-words break-all'
             >
               https://www.bps.org.uk/psychologist/neurodiversity
             </Link>
@@ -147,7 +147,7 @@ export default function page() {
               href='https://www.autism.org.uk/advice-and-guidance/what-is-autism/neurodiversity'
               target='_blank'
               rel='noopener noreferrer'
-              className='text-primary underline'
+              className='text-primary underline break-words break-all'
             >
               https://www.autism.org.uk/advice-and-guidance/what-is-autism/neurodiversity
             </Link>
@@ -171,7 +171,7 @@ export default function page() {
         </motion.div>
       </section>
 
-      <section className='mx-auto max-w-7xl rounded-2xl px-8 py-12 bg-white/5 dark:bg-black/20 shadow-lg'>
+      <section className='mx-auto lg:max-w-7xl w-[90%] rounded-2xl px-8 py-12 bg-white/5 dark:bg-black/20 shadow-lg'>
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -195,7 +195,7 @@ export default function page() {
               href='https://www.simplypsychology.org/cognitive-load-theory.html'
               target='_blank'
               rel='noopener noreferrer'
-              className='text-primary underline'
+              className='text-primary underline break-words break-all'
             >
               https://www.simplypsychology.org/cognitive-load-theory.html
             </Link>
@@ -205,7 +205,7 @@ export default function page() {
               href='https://www.learningscientists.org/blog/2017/7/20/cognitive-load'
               target='_blank'
               rel='noopener noreferrer'
-              className='text-primary underline'
+              className='text-primary underline break-words break-all'
             >
               https://www.learningscientists.org/blog/2017/7/20/cognitive-load
             </Link>
@@ -233,7 +233,7 @@ export default function page() {
         </motion.div>
       </section>
 
-      <section className='mx-auto max-w-7xl border-t-4 border-primary rounded-b-xl px-8 py-12 bg-white/5 dark:bg-black/20 shadow-sm'>
+      <section className='mx-auto lg:max-w-7xl w-[90%] border-t-4 border-primary rounded-b-xl px-8 py-12 bg-white/5 dark:bg-black/20 shadow-sm'>
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -254,7 +254,7 @@ export default function page() {
               href='https://www.cdc.gov/adhd/features/executive-function.html'
               target='_blank'
               rel='noopener noreferrer'
-              className='text-primary underline'
+              className='text-primary underline break-words break-all'
             >
               https://www.cdc.gov/adhd/features/executive-function.html
             </Link>
@@ -265,7 +265,7 @@ export default function page() {
               href='https://www.understood.org/en/articles/executive-functioning-issues-what-you-need-to-know'
               target='_blank'
               rel='noopener noreferrer'
-              className='text-primary underline'
+              className='text-primary underline break-words break-all'
             >
               https://www.understood.org/en/articles/executive-functioning-issues-what-you-need-to-know
             </Link>
@@ -293,7 +293,7 @@ export default function page() {
         </motion.div>
       </section>
 
-      <section className='mx-auto max-w-7xl rounded-2xl px-8 py-12 bg-white/10 dark:bg-black/30 shadow-md'>
+      <section className='mx-auto lg:max-w-7xl w-[90%] rounded-2xl px-8 py-12 bg-white/10 dark:bg-black/30 shadow-md'>
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -315,7 +315,7 @@ export default function page() {
               href='https://www.cast.org/impact/universal-design-for-learning-udl'
               target='_blank'
               rel='noopener noreferrer'
-              className='text-primary underline'
+              className='text-primary underline break-words break-all'
             >
               https://www.cast.org/impact/universal-design-for-learning-udl
             </Link>
@@ -330,7 +330,7 @@ export default function page() {
               href='https://www.unesco.org/en/inclusive-education'
               target='_blank'
               rel='noopener noreferrer'
-              className='text-primary underline'
+              className='text-primary underline break-words break-all'
             >
               https://www.unesco.org/en/inclusive-education
             </Link>
@@ -352,7 +352,7 @@ export default function page() {
         </motion.div>
       </section>
 
-      <section className='mx-auto max-w-7xl border-r-4 border-primary rounded-l-xl px-8 py-12 bg-white/5 dark:bg-black/20 shadow-sm'>
+      <section className='mx-auto lg:max-w-7xl w-[90%] border-r-4 border-primary rounded-l-xl px-8 py-12 bg-white/5 dark:bg-black/20 shadow-sm'>
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -373,7 +373,7 @@ export default function page() {
               href='https://www.weforum.org/reports/the-future-of-jobs-report-2025'
               target='_blank'
               rel='noopener noreferrer'
-              className='text-primary underline'
+              className='text-primary underline break-words break-all'
             >
               https://www.weforum.org/reports/the-future-of-jobs-report-2025
             </Link>
@@ -383,7 +383,7 @@ export default function page() {
               href='https://www.oecd.org/skills/'
               target='_blank'
               rel='noopener noreferrer'
-              className='text-primary underline'
+              className='text-primary underline break-words break-all'
             >
               https://www.oecd.org/skills/
             </Link>
@@ -409,7 +409,7 @@ export default function page() {
         </motion.div>
       </section>
 
-      <section className='mx-auto max-w-7xl border border-primary/20 rounded-xl px-8 py-12 shadow-md hover:shadow-lg transition-shadow'>
+      <section className='mx-auto lg:max-w-7xl w-[90%] border border-primary/20 rounded-xl px-8 py-12 shadow-md hover:shadow-lg transition-shadow'>
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -432,7 +432,7 @@ export default function page() {
               href='https://www.officeforstudents.org.uk/advice-and-guidance/promoting-equal-opportunities/disability/'
               target='_blank'
               rel='noopener noreferrer'
-              className='text-primary underline'
+              className='text-primary underline break-words break-all'
             >
               https://www.officeforstudents.org.uk/advice-and-guidance/promoting-equal-opportunities/disability/
             </Link>
@@ -454,7 +454,7 @@ export default function page() {
         </motion.div>
       </section>
 
-      <section className='mx-auto max-w-7xl px-5 py-20'>
+      <section className='mx-auto lg:max-w-7xl w-[90%] px-5 py-20'>
         <motion.div
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}

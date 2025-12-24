@@ -155,7 +155,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className='space-y-10 py-16 lg:py-24 bg-primary'>
+      <section className='space-y-10 px-5 lg:px-0 py-16 lg:py-24 bg-primary'>
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
