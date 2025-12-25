@@ -37,12 +37,12 @@ export const faqsData = [
   {
     title: 'Do I need prior experience to use Desables?',
     answer:
-      "Many learners worry they’re 'not ready yet'.\n\nNo prior experience is required. Our pathways are designed to meet learners where they are and support gradual, confidence-building progression. You don’t need to already feel 'good at tech' to begin.",
+      "Our pathways are designed to meet learners where they are and support gradual, confidence-building progression. You don’t need to already feel 'good at tech' to begin.",
   },
   {
     title: 'Will there be support if I get stuck?',
     answer:
-      'Fear of being abandoned mid-learning is common. Yes. Support is built into the learning experience through guided pathways, clear instructions, and access to community and feedback where appropriate.',
+      'Yes. Support is built into the learning experience through guided pathways, clear instructions, and access to community and feedback where appropriate.',
   },
   {
     title: 'What if I need breaks or time away?',

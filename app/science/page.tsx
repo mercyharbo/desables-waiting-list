@@ -35,17 +35,17 @@ const staggerContainer = {
 
 export default function page() {
   return (
-    <main className='space-y-10 '>
+    <main className='w-full space-y-10 '>
       {/* Enhanced Hero Section */}
-      <section className='relative text-center  bg-primary-alt h-[70vh] overflow-hidden'>
+      <section className='relative text-center bg-primary-alt 2xl:h-[85vh] xl:h-[80vh] lg:h-[80vh] md:h-[60vh] h-[90vh] overflow-hidden'>
         {/* Phone mockup (center bottom) */}
-        <div className='absolute left-1/2 bottom-0 transform -translate-x-1/2 z-0 pointer-events-none'>
+        <div className='absolute left-1/2 bottom-0 w-full md:w-auto mx-auto transform -translate-x-1/2 z-0 pointer-events-none'>
           <Image
             src='/desables-phone--light-mode.png'
             width={700}
             height={640}
             alt='Desables phone'
-            className='object-cover w-175 h-75 lg:w-175  '
+            className='object-cover w-175 h-75 md:w-175 lg:w-175  '
           />
         </div>
 
@@ -53,7 +53,7 @@ export default function page() {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
-          className='space-y-6 relative h-full flex flex-col justify-center items-center z-10 px-6 py-8'
+          className='space-y-6 relative h-full flex flex-col justify-start items-center z-10 px-6 py-16'
         >
           {/* Overlay behind text */}
           <div className='absolute inset-0 bg-black/70 h-full w-full dark:bg-black/65 -z-10' />
@@ -82,7 +82,7 @@ export default function page() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.5 }}
-            className='text-lg lg:text-xl text-white leading-relaxed max-w-3xl mx-auto'
+            className='text-base md:text-lg lg:text-base text-white leading-relaxed max-w-3xl mx-auto'
           >
             Desables is built on decades of evidence from cognitive science,
             neurodiversity research, and inclusive education design. These
@@ -96,8 +96,7 @@ export default function page() {
         </motion.div>
       </section>
 
-      {/* smart section */}
-      <section className='mx-auto lg:max-w-7xl w-[90%]   border-l-4 border-primary rounded-r-xl px-8 py-12 bg-white/5 dark:bg-black/20 shadow-sm'>
+      <section className='mx-auto lg:max-w-7xl w-[90%]  border-l-4 border-primary rounded-r-xl px-8 py-12 bg-muted/5 dark:bg-black/20 shadow-sm'>
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -109,7 +108,7 @@ export default function page() {
             Neurodiversity as Natural Cognitive Variation
           </h3>
 
-          <p className='text-lg dark:text-gray-300 text-gray-600 leading-relaxed'>
+          <p className='text-base dark:text-gray-300 text-gray-700 leading-relaxed'>
             Modern psychology and education research increasingly recognise
             neurodiversity as a natural form of human variation rather than a
             deficit. Autism and ADHD are understood as differences in cognitive
@@ -121,7 +120,7 @@ export default function page() {
               href='https://www.health.harvard.edu/blog/what-is-neurodiversity-202111162645'
               target='_blank'
               rel='noopener noreferrer'
-              className='text-primary underline break-words break-all'
+              className='text-primary underline block w-full whitespace-normal wrap-break-word break-all md:inline md:w-auto md:whitespace-nowrap md:break-normal'
             >
               https://www.health.harvard.edu/blog/what-is-neurodiversity-202111162645
             </Link>
@@ -132,14 +131,14 @@ export default function page() {
               href='https://www.bps.org.uk/psychologist/neurodiversity'
               target='_blank'
               rel='noopener noreferrer'
-              className='text-primary underline break-words break-all'
+              className='text-primary underline block w-full whitespace-normal wrap-break-word break-all md:inline md:w-auto md:whitespace-nowrap md:break-normal'
             >
               https://www.bps.org.uk/psychologist/neurodiversity
             </Link>
             ).
           </p>
 
-          <p className='text-lg dark:text-gray-300 text-gray-600 leading-relaxed'>
+          <p className='text-base dark:text-gray-300 text-gray-700 leading-relaxed'>
             Research and advocacy organisations including the National Autistic
             Society further reinforce that autistic cognition should be
             understood through difference, not deficiency (
@@ -147,7 +146,7 @@ export default function page() {
               href='https://www.autism.org.uk/advice-and-guidance/what-is-autism/neurodiversity'
               target='_blank'
               rel='noopener noreferrer'
-              className='text-primary underline break-words break-all'
+              className='text-primary underline block w-full whitespace-normal wrap-break-word break-all md:inline md:w-auto md:whitespace-nowrap md:break-normal'
             >
               https://www.autism.org.uk/advice-and-guidance/what-is-autism/neurodiversity
             </Link>
@@ -158,7 +157,7 @@ export default function page() {
             How Desables applies this
           </h4>
 
-          <p className='text-lg dark:text-gray-300 text-gray-600 leading-relaxed'>
+          <p className='text-base dark:text-gray-300 text-gray-700 leading-relaxed'>
             Desables treats neurodivergent cognition as a starting point for
             design, not an exception to be accommodated. The platform avoids
             deficit-based language and does not frame learners as needing to
@@ -171,7 +170,7 @@ export default function page() {
         </motion.div>
       </section>
 
-      <section className='mx-auto lg:max-w-7xl w-[90%] rounded-2xl px-8 py-12 bg-white/5 dark:bg-black/20 shadow-lg'>
+      <section className='mx-auto lg:max-w-7xl w-[90%] rounded-2xl px-8 py-12 bg-muted/5 dark:bg-black/20 shadow-lg'>
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -183,7 +182,7 @@ export default function page() {
             Cognitive Load and Learning Effectiveness
           </h3>
 
-          <p className='text-lg dark:text-gray-300 text-gray-600 leading-relaxed'>
+          <p className='text-base dark:text-gray-300 text-gray-700 leading-relaxed'>
             Cognitive Load Theory explains that learning is disrupted when
             working memory is overloaded by unnecessary complexity, unclear
             structure, or excessive stimuli. Educational psychology research
@@ -195,7 +194,7 @@ export default function page() {
               href='https://www.simplypsychology.org/cognitive-load-theory.html'
               target='_blank'
               rel='noopener noreferrer'
-              className='text-primary underline break-words break-all'
+              className='text-primary underline block w-full whitespace-normal wrap-break-word break-all md:inline md:w-auto md:whitespace-nowrap md:break-normal'
             >
               https://www.simplypsychology.org/cognitive-load-theory.html
             </Link>
@@ -205,14 +204,14 @@ export default function page() {
               href='https://www.learningscientists.org/blog/2017/7/20/cognitive-load'
               target='_blank'
               rel='noopener noreferrer'
-              className='text-primary underline break-words break-all'
+              className='text-primary underline block w-full whitespace-normal wrap-break-word break-all md:inline md:w-auto md:whitespace-nowrap md:break-normal'
             >
               https://www.learningscientists.org/blog/2017/7/20/cognitive-load
             </Link>
             ).
           </p>
 
-          <p className='text-lg dark:text-gray-300 text-gray-600 leading-relaxed'>
+          <p className='text-base dark:text-gray-300 text-gray-700 leading-relaxed'>
             These findings are particularly relevant for digital learning
             environments, where interface design and information density can
             either support or hinder learning.
@@ -222,7 +221,7 @@ export default function page() {
             How Desables applies this
           </h4>
 
-          <p className='text-lg dark:text-gray-300 text-gray-600 leading-relaxed'>
+          <p className='text-base dark:text-gray-300 text-gray-700 leading-relaxed'>
             Desables is intentionally designed to minimise unnecessary cognitive
             effort. Interfaces are calm and predictable, instructions are
             explicit, and learning is broken into manageable stages. Learners
@@ -233,7 +232,7 @@ export default function page() {
         </motion.div>
       </section>
 
-      <section className='mx-auto lg:max-w-7xl w-[90%] border-t-4 border-primary rounded-b-xl px-8 py-12 bg-white/5 dark:bg-black/20 shadow-sm'>
+      <section className='mx-auto lg:max-w-7xl w-[90%] border-t-4 border-primary rounded-b-xl px-8 py-12 bg-muted/5 dark:bg-black/20 shadow-sm'>
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -245,7 +244,7 @@ export default function page() {
             Attention, Executive Function, and ADHD
           </h3>
 
-          <p className='text-lg dark:text-gray-300 text-gray-600 leading-relaxed'>
+          <p className='text-base dark:text-gray-300 text-gray-700 leading-relaxed'>
             Research into ADHD highlights differences in executive functioning,
             including task initiation, sustained attention, and time perception.
             These differences are widely recognised by institutions such as the
@@ -254,7 +253,7 @@ export default function page() {
               href='https://www.cdc.gov/adhd/features/executive-function.html'
               target='_blank'
               rel='noopener noreferrer'
-              className='text-primary underline break-words break-all'
+              className='text-primary underline block w-full whitespace-normal wrap-break-word break-all md:inline md:w-auto md:whitespace-nowrap md:break-normal'
             >
               https://www.cdc.gov/adhd/features/executive-function.html
             </Link>
@@ -265,14 +264,14 @@ export default function page() {
               href='https://www.understood.org/en/articles/executive-functioning-issues-what-you-need-to-know'
               target='_blank'
               rel='noopener noreferrer'
-              className='text-primary underline break-words break-all'
+              className='text-primary underline block w-full whitespace-normal wrap-break-word break-all md:inline md:w-auto md:whitespace-nowrap md:break-normal'
             >
               https://www.understood.org/en/articles/executive-functioning-issues-what-you-need-to-know
             </Link>
             ).
           </p>
 
-          <p className='text-lg dark:text-gray-300 text-gray-600 leading-relaxed'>
+          <p className='text-base dark:text-gray-300 text-gray-700 leading-relaxed'>
             Traditional learning systems often exacerbate these challenges
             through rigid deadlines, constant notifications, and penalty-driven
             progression.
@@ -282,7 +281,7 @@ export default function page() {
             How Desables applies this
           </h4>
 
-          <p className='text-lg dark:text-gray-300 text-gray-600 leading-relaxed'>
+          <p className='text-base dark:text-gray-300 text-gray-700 leading-relaxed'>
             Desables supports executive function differences by designing for
             continuity rather than enforcement. Learning pathways allow flexible
             pacing, pauses without penalty, and clear re-entry points after
@@ -293,7 +292,7 @@ export default function page() {
         </motion.div>
       </section>
 
-      <section className='mx-auto lg:max-w-7xl w-[90%] rounded-2xl px-8 py-12 bg-white/10 dark:bg-black/30 shadow-md'>
+      <section className='mx-auto lg:max-w-7xl w-[90%] rounded-2xl px-8 py-12 bg-muted/5 dark:bg-black/30 shadow-md'>
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -305,7 +304,7 @@ export default function page() {
             Universal Design for Learning (UDL)
           </h3>
 
-          <p className='text-lg dark:text-gray-300 text-gray-600 leading-relaxed'>
+          <p className='text-base dark:text-gray-300 text-gray-700 leading-relaxed'>
             Universal Design for Learning (UDL) is an internationally recognised
             framework developed by CAST, which demonstrates that learning
             environments designed for diversity improve outcomes for all
@@ -315,14 +314,14 @@ export default function page() {
               href='https://www.cast.org/impact/universal-design-for-learning-udl'
               target='_blank'
               rel='noopener noreferrer'
-              className='text-primary underline break-words break-all'
+              className='text-primary underline block w-full whitespace-normal wrap-break-word break-all md:inline md:w-auto md:whitespace-nowrap md:break-normal'
             >
               https://www.cast.org/impact/universal-design-for-learning-udl
             </Link>
             ).
           </p>
 
-          <p className='text-lg dark:text-gray-300 text-gray-600 leading-relaxed'>
+          <p className='text-base dark:text-gray-300 text-gray-700 leading-relaxed'>
             UNESCO’s work on inclusive education further reinforces that
             accessibility and flexibility are foundational to equitable learning
             environments (
@@ -330,7 +329,7 @@ export default function page() {
               href='https://www.unesco.org/en/inclusive-education'
               target='_blank'
               rel='noopener noreferrer'
-              className='text-primary underline break-words break-all'
+              className='text-primary underline block w-full whitespace-normal wrap-break-word break-all md:inline md:w-auto md:whitespace-nowrap md:break-normal'
             >
               https://www.unesco.org/en/inclusive-education
             </Link>
@@ -341,7 +340,7 @@ export default function page() {
             How Desables applies this
           </h4>
 
-          <p className='text-lg dark:text-gray-300 text-gray-600 leading-relaxed'>
+          <p className='text-base dark:text-gray-300 text-gray-700 leading-relaxed'>
             Desables incorporates UDL principles throughout the platform.
             Learners are offered multiple ways to engage with content,
             flexibility in how they move through learning pathways, and choice
@@ -352,7 +351,7 @@ export default function page() {
         </motion.div>
       </section>
 
-      <section className='mx-auto lg:max-w-7xl w-[90%] border-r-4 border-primary rounded-l-xl px-8 py-12 bg-white/5 dark:bg-black/20 shadow-sm'>
+      <section className='mx-auto lg:max-w-7xl w-[90%] border-r-4 border-primary rounded-l-xl px-8 py-12 bg-muted/5 dark:bg-black/20 shadow-sm'>
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -364,7 +363,7 @@ export default function page() {
             Skills, Capability, and the Future of Work
           </h3>
 
-          <p className='text-lg dark:text-gray-300 text-gray-600 leading-relaxed'>
+          <p className='text-base dark:text-gray-300 text-gray-700 leading-relaxed'>
             Global labour market research increasingly shows a shift toward
             skills-based evaluation and lifelong learning. The World Economic
             Forum highlights that employers are placing greater value on
@@ -373,7 +372,7 @@ export default function page() {
               href='https://www.weforum.org/reports/the-future-of-jobs-report-2025'
               target='_blank'
               rel='noopener noreferrer'
-              className='text-primary underline break-words break-all'
+              className='text-primary underline block w-full whitespace-normal wrap-break-word break-all md:inline md:w-auto md:whitespace-nowrap md:break-normal'
             >
               https://www.weforum.org/reports/the-future-of-jobs-report-2025
             </Link>
@@ -383,14 +382,14 @@ export default function page() {
               href='https://www.oecd.org/skills/'
               target='_blank'
               rel='noopener noreferrer'
-              className='text-primary underline break-words break-all'
+              className='text-primary underline block w-full whitespace-normal wrap-break-word break-all md:inline md:w-auto md:whitespace-nowrap md:break-normal'
             >
               https://www.oecd.org/skills/
             </Link>
             ).
           </p>
 
-          <p className='text-lg dark:text-gray-300 text-gray-600 leading-relaxed'>
+          <p className='text-base dark:text-gray-300 text-gray-700 leading-relaxed'>
             This research underscores the importance of learning experiences
             that translate into real capability.
           </p>
@@ -399,7 +398,7 @@ export default function page() {
             How Desables applies this
           </h4>
 
-          <p className='text-lg dark:text-gray-300 text-gray-600 leading-relaxed'>
+          <p className='text-base dark:text-gray-300 text-gray-700 leading-relaxed'>
             Desables focuses on building and making visible real skills.
             Learning pathways prioritise application, confidence, and the
             ability to articulate what has been learned. Progress is connected
@@ -421,7 +420,7 @@ export default function page() {
             Inclusive Education and Learner Retention
           </h3>
 
-          <p className='text-lg dark:text-gray-300 text-gray-600 leading-relaxed'>
+          <p className='text-base dark:text-gray-300 text-gray-700 leading-relaxed'>
             Research into inclusive education consistently shows that
             neurodivergent learners are more likely to persist when learning
             environments are predictable, respectful, and psychologically safe.
@@ -432,7 +431,7 @@ export default function page() {
               href='https://www.officeforstudents.org.uk/advice-and-guidance/promoting-equal-opportunities/disability/'
               target='_blank'
               rel='noopener noreferrer'
-              className='text-primary underline break-words break-all'
+              className='text-primary underline block w-full whitespace-normal wrap-break-word break-all md:inline md:w-auto md:whitespace-nowrap md:break-normal'
             >
               https://www.officeforstudents.org.uk/advice-and-guidance/promoting-equal-opportunities/disability/
             </Link>
@@ -443,7 +442,7 @@ export default function page() {
             How Desables applies this
           </h4>
 
-          <p className='text-lg dark:text-gray-300 text-gray-600 leading-relaxed'>
+          <p className='text-base dark:text-gray-300 text-gray-700 leading-relaxed'>
             Desables prioritises learner dignity as a core principle. There are
             no public rankings or competitive pressure mechanisms. Language
             across the platform respects autonomy and agency, and community
@@ -478,79 +477,22 @@ export default function page() {
 
           {/* Story Content in Sections */}
           <div className='space-y-10'>
-            {/* Highlighted Box */}
-            {/* <motion.div
-              initial={{ opacity: 0, scale: 0.95 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: 0.7 }}
-              className='relative bg-primary/20 border-2 border-primary/30 rounded-2xl p-8 lg:p-10'
-            >
-              <div className='absolute top-0 left-8 -translate-y-1/2'>
-                <div className='bg-primary px-4 py-1 rounded-full'>
-                  <span className='dark:text-black text-white font-bold text-sm'>
-                    Our Philosophy
-                  </span>
-                </div>
-              </div>
-              <div className='space-y-6 pt-4'>
-                <p className='text-gray-800 dark:text-gray-300 leading-relaxed'>
-                  Feedback is supportive and specific; nudges are gentle and
-                  optional; wellbeing is designed in with quiet modes,
-                  motion-reduced celebrations, and sensible breaks. Community
-                  spaces are moderated with care, so encouragement outnumbers
-                  anxiety.
-                </p>
-                <p className='text-gray-800 dark:text-gray-300 leading-relaxed'>
-                  Our gamification is purposeful, not performative. We use
-                  quests that map to real skills, XP for evidence-based
-                  milestones, and streaks that never punish a missed day. Badges
-                  are earned by shipping work, not by clicking through videos.
-                </p>
-              </div>
-            </motion.div> */}
-
-            {/* Mission Statement */}
-            {/* <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: 0.8 }}
-              className='bg-primary/10 border-l-4 border-primary rounded-r-2xl p-6 lg:p-8 space-y-4'
-            >
-              <p className='dark:text-white text-black leading-relaxed text-lg'>
-                We registered as a{' '}
-                <span className='text-primary font-bold'>
-                  Community Interest Company
-                </span>{' '}
-                to anchor our mission: opening high-value digital skills to
-                people mainstream platforms overlook, and making those skills
-                count in real hiring.
-              </p>
-              <p className='text-gray-600 dark:text-gray-300 leading-relaxed italic'>
-                This isn&apos;t charity; it&apos;s better product. When the
-                product fits more people, more people finish, and more people
-                get hired. That&apos;s the point.
-              </p>
-            </motion.div> */}
-
-            {/* Problem */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: 0.9 }}
-              className='bg-white/5 dark:bg-black/20 border rounded-xl p-6 lg:p-8 space-y-4'
+              className='bg-muted/5 dark:bg-black/20 border rounded-xl p-6 lg:p-8 space-y-4'
             >
               <h4 className='text-xl font-semibold dark:text-white text-black'>
                 The Problem
               </h4>
 
-              <p className='text-lg dark:text-gray-300 text-gray-600 leading-relaxed'>
+              <p className='text-base dark:text-gray-300 text-gray-700 leading-relaxed'>
                 We kept seeing the same pattern.
               </p>
 
-              <p className='text-lg dark:text-gray-300 text-gray-600 leading-relaxed'>
+              <p className='text-base dark:text-gray-300 text-gray-700 leading-relaxed'>
                 Autistic and ADHD learners with clear ability and genuine
                 interest were not falling behind because they lacked
                 intelligence or motivation. They were struggling because the
@@ -559,7 +501,7 @@ export default function page() {
                 information.
               </p>
 
-              <p className='text-lg dark:text-gray-300 text-gray-600 leading-relaxed'>
+              <p className='text-base dark:text-gray-300 text-gray-700 leading-relaxed'>
                 Most learning platforms still prioritise speed, constant
                 engagement, and cognitive endurance. They assume learners can
                 navigate dense interfaces, unclear expectations, rigid
@@ -568,14 +510,14 @@ export default function page() {
                 visibility rather than understanding or sustainability.
               </p>
 
-              <p className='text-lg dark:text-gray-300 text-gray-600 leading-relaxed'>
+              <p className='text-base dark:text-gray-300 text-gray-700 leading-relaxed'>
                 For many neurodivergent learners, this misalignment leads to
                 exhaustion, disengagement, or leaving education altogether. Not
                 because learning is inaccessible, but because the environment
                 is.
               </p>
 
-              <p className='text-lg dark:text-gray-300 text-gray-600 leading-relaxed font-semibold'>
+              <p className='text-base dark:text-gray-300 text-gray-700 leading-relaxed font-semibold'>
                 The problem was not the learner. <br />
                 It was the system.
               </p>
@@ -593,19 +535,19 @@ export default function page() {
                 The Solution
               </h4>
 
-              <p className='text-lg dark:text-gray-300 text-gray-600 leading-relaxed'>
+              <p className='text-base dark:text-gray-300 text-gray-700 leading-relaxed'>
                 Desables was created to redesign the learning environment
                 itself.
               </p>
 
-              <p className='text-lg dark:text-gray-300 text-gray-600 leading-relaxed'>
+              <p className='text-base dark:text-gray-300 text-gray-700 leading-relaxed'>
                 Rather than pushing learners to adapt, Desables adapts to how
                 learners actually think and learn. The platform is built around
                 clarity, flexibility, and dignity, reducing cognitive overload
                 and supporting focus, pacing, and confidence.
               </p>
 
-              <p className='text-lg dark:text-gray-300 text-gray-600 leading-relaxed'>
+              <p className='text-base dark:text-gray-300 text-gray-700 leading-relaxed'>
                 Progress on Desables is not measured by speed or constant
                 activity. Learners are recognised for understanding, applied
                 skills, and meaningful growth. Badges and certificates are not
@@ -613,7 +555,7 @@ export default function page() {
                 capability that learners can trust and carry forward.
               </p>
 
-              <p className='text-lg dark:text-gray-300 text-gray-600 leading-relaxed font-semibold'>
+              <p className='text-base dark:text-gray-300 text-gray-700 leading-relaxed font-semibold'>
                 Learning becomes sustainable, visible, and aligned with real
                 outcomes.
               </p>
@@ -625,31 +567,31 @@ export default function page() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: 1.1 }}
-              className='bg-white/5 dark:bg-black/20 border rounded-xl p-6 lg:p-8 space-y-4'
+              className='bg-muted/5 dark:bg-black/20 border rounded-xl p-6 lg:p-8 space-y-4'
             >
               <h4 className='text-xl font-semibold dark:text-white text-black'>
                 The Founder&apos;s Story
               </h4>
 
-              <p className='text-lg dark:text-gray-300 text-gray-600 leading-relaxed'>
+              <p className='text-base dark:text-gray-300 text-gray-700 leading-relaxed'>
                 I didn&apos;t turn to Desables because I wanted to build a
                 platform. I came to it because I kept seeing the same outcome.
                 Desables grew from years of working alongside neurodivergent
                 learners.
               </p>
 
-              <p className='text-lg dark:text-gray-300 text-gray-600 leading-relaxed'>
+              <p className='text-base dark:text-gray-300 text-gray-700 leading-relaxed'>
                 Again and again, the same truths became clear. When the
                 environment was supportive, these learners thrived. When it was
                 rigid or overwhelming, the same learners disengaged, not from
                 lack of ability, but from systems that misunderstood them.
               </p>
 
-              <p className='text-lg dark:text-gray-300 text-gray-600 leading-relaxed'>
+              <p className='text-base dark:text-gray-300 text-gray-700 leading-relaxed'>
                 The issue was never effort or intelligence. It was design.
               </p>
 
-              <p className='text-lg dark:text-gray-300 text-gray-600 leading-relaxed font-semibold'>
+              <p className='text-base dark:text-gray-300 text-gray-700 leading-relaxed font-semibold'>
                 Desables exists because too many capable people are excluded not
                 by their minds, but by systems that refuse to make space for
                 difference.
@@ -668,19 +610,19 @@ export default function page() {
                 Our Big Bet
               </h4>
 
-              <p className='text-lg dark:text-gray-300 text-gray-600 leading-relaxed'>
+              <p className='text-base dark:text-gray-300 text-gray-700 leading-relaxed'>
                 We believe that ability flourishes when learning environments
                 respect cognitive diversity.
               </p>
 
-              <p className='text-lg dark:text-gray-300 text-gray-600 leading-relaxed'>
+              <p className='text-base dark:text-gray-300 text-gray-700 leading-relaxed'>
                 Our belief is simple. When systems are designed with clarity,
                 flexibility, and care, neurodivergent learners do not need to be
                 fixed, pushed, or motivated. They succeed because the
                 environment finally fits.
               </p>
 
-              <p className='text-lg dark:text-gray-300 text-gray-600 leading-relaxed font-semibold'>
+              <p className='text-base dark:text-gray-300 text-gray-700 leading-relaxed font-semibold'>
                 Desables is built on the belief that inclusive design is not a
                 compromise, it is a competitive advantage, for learners,
                 employers, and the future of work.
@@ -725,7 +667,7 @@ export default function page() {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.6, delay: 0.3 }}
-                  className='text-lg lg:text-xl text-white/90 leading-relaxed text-center max-w-4xl mx-auto'
+                  className='text-base lg:text-xl text-white/90 leading-relaxed text-center max-w-4xl mx-auto'
                 >
                   We put you at the centre. We listen first, design with you,
                   and ensure accessibility is non-negotiable. Your progress
@@ -740,7 +682,7 @@ export default function page() {
                   whileInView={{ opacity: 1 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.6, delay: 0.4 }}
-                  className='grid sm:grid-cols-3 gap-6 lg:gap-8 pt-8'
+                  className='grid grid-cols-1 lg:grid-cols-3 gap-6 lg:gap-8 pt-8'
                 >
                   <div className='space-y-3 text-center transform transition-transform duration-300 hover:scale-105'>
                     <div className='flex justify-center'>
@@ -748,7 +690,7 @@ export default function page() {
                         <div className='size-3 bg-primary rounded-full' />
                       </div>
                     </div>
-                    <h3 className='text-white font-bold text-lg'>
+                    <h3 className='text-white font-bold text-base'>
                       Builts for different minds{' '}
                     </h3>
                     <p className='text-gray-400 text-sm'>
@@ -763,7 +705,7 @@ export default function page() {
                         <div className='size-3 bg-primary rounded-full' />
                       </div>
                     </div>
-                    <h3 className='text-white font-bold text-lg'>
+                    <h3 className='text-white font-bold text-base'>
                       Learners Shape Desables
                     </h3>
                     <p className='text-gray-400 text-sm'>
@@ -778,7 +720,7 @@ export default function page() {
                         <div className='size-3 bg-primary rounded-full' />
                       </div>
                     </div>
-                    <h3 className='text-white font-bold text-lg'>
+                    <h3 className='text-white font-bold text-base'>
                       Skills That Travel With You.
                     </h3>
                     <p className='text-gray-400 text-sm'>
@@ -809,7 +751,7 @@ export default function page() {
             initial='initial'
             whileInView='animate'
             viewport={{ once: true }}
-            className='grid grid-cols-1 gap-5 lg:grid-cols-3 px-5 w-full lg:max-w-6xl'
+            className='grid grid-cols-1 gap-10 lg:grid-cols-3 md:gap-16 lg:gap-5 px-5 w-full lg:max-w-6xl'
           >
             <motion.div
               variants={fadeInUp}
@@ -913,7 +855,7 @@ export default function page() {
               transition={{ duration: 0.45 }}
               className='mx-auto'
             >
-              <TabsList className='h-14 w-76 px-1.5 gap-3 bg-muted/10 dark:bg-muted/20 rounded-4xl  mx-auto '>
+              <TabsList className='h-14 w-76 px-1.5 gap-3 bg-muted/10 dark:bg-muted/5 rounded-4xl  mx-auto '>
                 <TabsTrigger
                   value='before'
                   className='text-black dark:text-white'
@@ -953,7 +895,7 @@ export default function page() {
                       <Atom className='size-5 text-gray-700' />
                     </div>
                     <CardContent className='p-0 space-y-3 flex-1'>
-                      <h3 className='text-lg font-semibold text-gray-300'>
+                      <h3 className='text-base font-semibold text-gray-300'>
                         Learning feels heavier than it should
                       </h3>
                       <p className='text-sm text-gray-300'>
@@ -976,7 +918,7 @@ export default function page() {
                       <Zap className='size-5 text-gray-700' />
                     </div>
                     <CardContent className='p-0 space-y-3 flex-1'>
-                      <h3 className='text-lg font-semibold text-gray-300'>
+                      <h3 className='text-base font-semibold text-gray-300'>
                         Decision fatigue sets in early
                       </h3>
                       <p className='text-sm text-gray-300'>
@@ -998,7 +940,7 @@ export default function page() {
                       <Puzzle className='size-5 text-gray-700' />
                     </div>
                     <CardContent className='p-0 space-y-3 flex-1'>
-                      <h3 className='text-lg font-semibold text-gray-300'>
+                      <h3 className='text-base font-semibold text-gray-300'>
                         Attention is fragmented
                       </h3>
                       <p className='text-sm text-gray-300'>
@@ -1020,7 +962,7 @@ export default function page() {
                       <List className='size-5 text-gray-700' />
                     </div>
                     <CardContent className='p-0 space-y-3 flex-1'>
-                      <h3 className='text-lg font-semibold text-gray-300'>
+                      <h3 className='text-base font-semibold text-gray-300'>
                         Progress feels invisible
                       </h3>
                       <p className='text-sm text-gray-300'>
@@ -1052,7 +994,7 @@ export default function page() {
                       <Calendar className='size-5 text-black' />
                     </div>
                     <CardContent className='p-0 space-y-3 flex-1'>
-                      <h3 className='text-lg font-semibold text-black'>
+                      <h3 className='text-base font-semibold text-black'>
                         One clear learning path
                       </h3>
                       <p className='text-sm text-black'>
@@ -1075,7 +1017,7 @@ export default function page() {
                       <Watch className='size-5 text-black' />
                     </div>
                     <CardContent className='p-0 space-y-3 flex-1'>
-                      <h3 className='text-lg font-semibold text-black'>
+                      <h3 className='text-base font-semibold text-black'>
                         Learning starts with clarity, not pressure.
                       </h3>
                       <p className='text-sm text-black'>
@@ -1097,7 +1039,7 @@ export default function page() {
                       <Moon className='size-5 text-black' />
                     </div>
                     <CardContent className='p-0 space-y-3 flex-1'>
-                      <h3 className='text-lg font-semibold text-black'>
+                      <h3 className='text-base font-semibold text-black'>
                         The result isn’t more effort, it’s better timing.
                       </h3>
                       <p className='text-sm text-black'>
@@ -1119,7 +1061,7 @@ export default function page() {
                       <Waves className='size-5 text-black' />
                     </div>
                     <CardContent className='p-0 space-y-3 flex-1'>
-                      <h3 className='text-lg font-semibold text-black'>
+                      <h3 className='text-base font-semibold text-black'>
                         For once, focus feels supported rather than demanded.
                       </h3>
                       <p className='text-sm text-black'>

@@ -29,18 +29,14 @@ export default function Header() {
       : '/Group.svg')
 
   return (
-    <div className='mx-auto lg:px-16 px-6 py-8 flex items-center justify-between'>
-      <Link
-        href='/'
-        aria-label='Desables home'
-        className='inline-flex items-center gap-3'
-      >
+    <div className='mx-auto lg:px-16 md:px-10 xl:px-28 2xl:px-28 px-6 py-8 flex items-center justify-between'>
+      <Link href='/' aria-label='Desables home' className=''>
         <Image
           src={imgSrc}
           alt='Desables'
           width={500}
           height={32}
-          className='h-8 w-full object-cover'
+          className='h-8 w-28 md:w-36 lg:w-auto object-contain'
           priority
           onError={() => setFallbackSrc('/logo.png')}
         />

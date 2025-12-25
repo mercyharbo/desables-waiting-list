@@ -22,7 +22,7 @@ export function ThemeToggle() {
 
   return (
     <div className='flex items-center gap-3'>
-      <span className='text-sm'>
+      <span className='text-xs lg:text-sm md:text-base'>
         Switch to {checked ? 'Light' : 'Dark'} mode
       </span>
       <Switch

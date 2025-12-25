@@ -17,7 +17,7 @@ import {
   SelectTrigger,
   SelectValue,
 } from '@/components/ui/select'
-import { useState } from 'react'
+import React, { useState } from 'react'
 
 type WaitlistDialogProps = {
   open: boolean
@@ -32,16 +32,78 @@ export default function WaitlistDialog({
   const [email, setEmail] = useState('')
   const [referral, setReferral] = useState('')
   const [submitting, setSubmitting] = useState(false)
+  const [errors, setErrors] = useState<string[]>([])
+  const [success, setSuccess] = useState('')
+
+  // Basic email validation and overall form validity
+  const isEmailValid = React.useMemo(() => {
+    return /^\S+@\S+\.\S+$/.test(email.trim())
+  }, [email])
+
+  const isFormValid =
+    name.trim().length > 0 && isEmailValid && referral.trim().length > 0
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
+    setErrors([])
+    setSuccess('')
+
+    // basic client-side validation
+    if (!name.trim() || !email.trim()) {
+      setErrors(['Please provide your name and email.'])
+      return
+    }
+
     setSubmitting(true)
     try {
-      // Replace this with real submit logic (API call)
-      await new Promise((r) => setTimeout(r, 700))
+      const base = process.env.NEXT_PUBLIC_BASE_URL ?? ''
+      const res = await fetch(`${base}/waitlist`, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          name: name.trim(),
+          email: email.trim(),
+          referral,
+        }),
+      })
+
+      if (!res.ok) {
+        // Try to parse JSON error body and extract details array
+        const text = await res.text()
+        try {
+          const parsed = JSON.parse(text)
+          const details = parsed?.error?.details
+          if (Array.isArray(details) && details.length > 0) {
+            setErrors(details)
+            return
+          }
+          if (parsed?.message) {
+            setErrors([parsed.message])
+            return
+          }
+        } catch (e) {
+          // not JSON
+        }
+
+        setErrors([text || 'Failed to submit. Please try again.'])
+        return
+      }
+
+      setErrors([])
+      setSuccess('Thanks! You have been added to the waitlist.')
       setName('')
       setEmail('')
       setReferral('')
+
+      // close the dialog after a short delay so the user sees confirmation
+      setTimeout(() => {
+        onOpenChange(false)
+        setSuccess('')
+      }, 1600)
+    } catch (err: any) {
+      setErrors([err?.message || 'An unexpected error occurred.'])
     } finally {
       setSubmitting(false)
     }
@@ -73,7 +135,7 @@ export default function WaitlistDialog({
 
             <label
               htmlFor='name'
-              className='absolute left-3 top-1/2 -translate-y-1/2 text-sm text-gray-400 px-1 transition-all duration-200 pointer-events-none peer-placeholder-shown:top-1/2 peer-placeholder-shown:-translate-y-1/2 peer-placeholder-shown:text-sm peer-focus:-top-2 peer-focus:-translate-y-0 peer-focus:text-xs dark:peer-focus:text-primary dark:peer-focus:bg-black peer-focus:bg-muted peer-focus:text-black  peer-[:not(:placeholder-shown)]:-top-2 peer-[:not(:placeholder-shown)]:-translate-y-0 peer-[:not(:placeholder-shown)]:text-xs peer-[:not(:placeholder-shown)]:text-white peer-[:not(:placeholder-shown)]:bg-black'
+              className='absolute left-3 top-1/2 -translate-y-1/2 text-sm text-gray-400 px-1 transition-all duration-200 pointer-events-none peer-placeholder-shown:top-1/2 peer-placeholder-shown:-translate-y-1/2 peer-placeholder-shown:text-sm peer-focus:-top-2 peer-focus:-translate-y-0 peer-focus:text-xs dark:peer-focus:text-primary dark:peer-focus:bg-black peer-focus:bg-muted peer-focus:text-white  peer-[:not(:placeholder-shown)]:-top-2 peer-[:not(:placeholder-shown)]:-translate-y-0 peer-[:not(:placeholder-shown)]:text-xs peer-[:not(:placeholder-shown)]:text-white peer-[:not(:placeholder-shown)]:bg-black'
             >
               Name
             </label>
@@ -93,7 +155,7 @@ export default function WaitlistDialog({
 
             <label
               htmlFor='email'
-              className='absolute left-3 top-1/2 -translate-y-1/2 text-sm text-gray-400 px-1 transition-all duration-200 pointer-events-none peer-placeholder-shown:top-1/2 peer-placeholder-shown:-translate-y-1/2 peer-placeholder-shown:text-sm peer-focus:-top-2 peer-focus:-translate-y-0 peer-focus:text-xs dark:peer-focus:text-primary dark:peer-focus:bg-black peer-focus:bg-muted/20 peer-focus:text-black peer-[:not(:placeholder-shown)]:-top-2 peer-[:not(:placeholder-shown)]:-translate-y-0 peer-[:not(:placeholder-shown)]:text-xs peer-[:not(:placeholder-shown)]:text-white peer-[:not(:placeholder-shown)]:bg-black'
+              className='absolute left-3 top-1/2 -translate-y-1/2 text-sm text-gray-400 px-1 transition-all duration-200 pointer-events-none peer-placeholder-shown:top-1/2 peer-placeholder-shown:-translate-y-1/2 peer-placeholder-shown:text-sm peer-focus:-top-2 peer-focus:-translate-y-0 peer-focus:text-xs dark:peer-focus:text-primary dark:peer-focus:bg-black peer-focus:bg-muted peer-focus:text-white peer-[:not(:placeholder-shown)]:-top-2 peer-[:not(:placeholder-shown)]:-translate-y-0 peer-[:not(:placeholder-shown)]:text-xs peer-[:not(:placeholder-shown)]:text-white peer-[:not(:placeholder-shown)]:bg-black'
             >
               Email address
             </label>
@@ -178,14 +240,35 @@ export default function WaitlistDialog({
             </Select>
           </div>
 
-          <DialogFooter>
-            <Button
-              type='submit'
-              disabled={submitting}
-              className='dark:text-black text-white px-5 h-12 w-full'
-            >
-              {submitting ? 'Submitting…' : 'Join early access'}
-            </Button>
+          <DialogFooter className=''>
+            <div className='w-full flex flex-col gap-3'>
+              {errors.length > 0 && (
+                <ul
+                  className='text-sm text-destructive list-disc pl-5'
+                  role='alert'
+                >
+                  {errors.map((errMsg, i) => (
+                    <li key={i} className='mb-1'>
+                      {errMsg}
+                    </li>
+                  ))}
+                </ul>
+              )}
+
+              {success && (
+                <p className='text-sm text-green-600 ' role='status'>
+                  {success}
+                </p>
+              )}
+
+              <Button
+                type='submit'
+                disabled={submitting || !isFormValid}
+                className='dark:text-black text-white px-5 h-12 w-full'
+              >
+                {submitting ? 'Submitting…' : 'Join early access'}
+              </Button>
+            </div>
           </DialogFooter>
         </form>
       </DialogContent>
