@@ -67,7 +67,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang='en'>
-      <body className={`${SchibstedGrotesk.variable} min-w-full space-y-5 antialiased`}>
+      <body className={`${SchibstedGrotesk.variable} min-w-full  antialiased`}>
         <Providers>
           <Header />
           {children}

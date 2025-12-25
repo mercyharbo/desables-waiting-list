@@ -29,7 +29,7 @@ export default function Header() {
       : '/Group.svg')
 
   return (
-    <div className='mx-auto lg:px-16 md:px-10 xl:px-28 2xl:px-28 px-6 py-8 flex items-center justify-between'>
+    <div className='mx-auto lg:px-16 md:px-10 xl:px-28 2xl:px-28 px-6 lg:py-10 py-4 flex items-center justify-between'>
       <Link href='/' aria-label='Desables home' className=''>
         <Image
           src={imgSrc}

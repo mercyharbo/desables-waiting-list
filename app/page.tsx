@@ -47,22 +47,17 @@ export default function Home() {
     <main className=' '>
       <section
         id='early-access'
-        className='relative h-[65vh] md:h-[50vh] lg:h-[75vh] overflow-hidden w-full grid grid-cols-1 lg:grid-cols-2 gap-5'
+        className='relative py-5 md:h-[50vh] lg:h-[75vh] overflow-hidden w-full grid grid-cols-1 lg:grid-cols-2 gap-5'
       >
-        <div className='gap-4 w-full flex flex-col md:px-10 lg:px-28 px-5 justify-center lg:justify-start items-start xl:max-w-4xl 3xl:max-w-4xl lg:max-w-4xl 2xl:max-w-4xl'>
+        <div className='gap-4 w-full flex flex-col md:px-10 lg:px-28 px-5 justify-center lg:justify-start items-start xl:max-w-4xl xl:pt-20 3xl:max-w-4xl lg:max-w-3xl 2xl:max-w-3xl'>
           {/* Main heading with gradient */}
           <motion.h1
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.1 }}
-            className='text-4xl/snug md:text-6xl/snug 2xl:text-5xl/snug 3xl:text-[80px]/snug xl:text-5xl/snug lg:text-5xl/snug font-bold'
+            className='text-3xl/snug md:text-4xl/snug 2xl:text-4xl/snug 3xl:text-6xl/snug xl:text-4xl/snug lg:text-5xl/snug font-bold'
           >
-            <span className='bg-linear-to-br from-primary via-primary to-primary/70 bg-clip-text text-transparent'>
-              Learning designed for
-            </span>{' '}
-            <span className='dark:text-white text-black'>
-              how your mind works
-            </span>
+            Learning designed for how your mind works
           </motion.h1>
 
           {/* Description */}
@@ -155,13 +150,13 @@ export default function Home() {
         </div>
       </section>
 
-      <section className='space-y-10 px-5 lg:px-0 py-16 lg:py-24 bg-primary'>
+      <section className='space-y-10 px-5 lg:px-0 py-8 lg:py-24 bg-primary'>
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5 }}
-          className='prose mx-auto w-full lg:max-w-4xl text-center space-y-3'
+          className='prose mx-auto w-full lg:max-w-4xl text-left lg:text-center space-y-5'
         >
           <h2 className='text-4xl lg:text-5xl font-bold dark:text-black text-white'>
             Why We Exist
@@ -191,7 +186,7 @@ export default function Home() {
           initial='initial'
           whileInView='animate'
           viewport={{ once: true }}
-          className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mx-auto max-w-7xl px-6'
+          className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mx-auto max-w-7xl lg:px-6'
         >
           <motion.div variants={fadeInUp} className='md:col-span-1'>
             <Card className='group dark:bg-light-foreground bg-black shadow-none hover:scale-105 w-full transition-all duration-300 border border-gray-700 hover:border-primary/20 h-full'>

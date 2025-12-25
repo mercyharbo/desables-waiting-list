@@ -1,7 +1,7 @@
 'use client'
 
 import { motion } from 'framer-motion'
-import { Instagram, Linkedin, Twitter } from 'lucide-react'
+import { Instagram, Linkedin, Mail, Twitter } from 'lucide-react'
 import { useTheme } from 'next-themes'
 import Image from 'next/image'
 import Link from 'next/link'
@@ -61,6 +61,13 @@ export default function FooterComp() {
             transition={{ duration: 0.5 }}
             className='flex items-center gap-4'
           >
+            <Link
+              href='mailto:info@desables.com'
+              aria-label='Email us'
+              className='p-2 rounded-full hover:bg-primary/10 transition-colors group'
+            >
+              <Mail className='size-5 dark:text-gray-300 text-gray-600 group-hover:text-primary transition-colors' />
+            </Link>
             <Link
               href='https://x.com/Desables_'
               target='_blank'

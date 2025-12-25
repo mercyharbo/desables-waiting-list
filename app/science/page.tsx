@@ -5,11 +5,14 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs'
 import { motion } from 'framer-motion'
 import {
   Atom,
+  Brain,
+  Briefcase,
   Building,
   Calendar,
   GraduationCap,
   Handshake,
   List,
+  MessageSquare,
   Moon,
   Puzzle,
   Watch,
@@ -37,7 +40,7 @@ export default function page() {
   return (
     <main className='w-full space-y-10 '>
       {/* Enhanced Hero Section */}
-      <section className='relative text-center bg-primary-alt 2xl:h-[85vh] xl:h-[80vh] lg:h-[80vh] md:h-[60vh] h-[90vh] overflow-hidden'>
+      <section className='relative text-center bg-primary dark:bg-primary-alt 3xl:h-[70vh] 2xl:h-[70vh] xl:h-[80vh] lg:h-[80vh] md:h-[60vh] h-[90vh] overflow-hidden'>
         {/* Phone mockup (center bottom) */}
         <div className='absolute left-1/2 bottom-0 w-full md:w-auto mx-auto transform -translate-x-1/2 z-0 pointer-events-none'>
           <Image
@@ -56,7 +59,7 @@ export default function page() {
           className='space-y-6 relative h-full flex flex-col justify-start items-center z-10 px-6 py-16'
         >
           {/* Overlay behind text */}
-          <div className='absolute inset-0 bg-black/70 h-full w-full dark:bg-black/65 -z-10' />
+          <div className='absolute inset-0 bg-black/65 h-full w-full dark:bg-black/65 -z-10' />
 
           <motion.h1
             initial={{ opacity: 0, y: 20 }}
@@ -115,7 +118,7 @@ export default function page() {
             processing, attention, and sensory experience — not indicators of
             reduced intelligence or motivation. This perspective is supported by
             organisations such as Harvard Health, which frames neurodiversity as
-            a strengths-based concept rather than a disorder-focused one ( (
+            a strengths-based concept rather than a disorder-focused one{' '}
             <Link
               href='https://www.health.harvard.edu/blog/what-is-neurodiversity-202111162645'
               target='_blank'
@@ -124,9 +127,9 @@ export default function page() {
             >
               https://www.health.harvard.edu/blog/what-is-neurodiversity-202111162645
             </Link>
-            ), as well as the British Psychological Society, which emphasises
+            , as well as the British Psychological Society, which emphasises
             that challenges often arise from environmental mismatch rather than
-            individual limitation (
+            individual limitation{' '}
             <Link
               href='https://www.bps.org.uk/psychologist/neurodiversity'
               target='_blank'
@@ -135,13 +138,13 @@ export default function page() {
             >
               https://www.bps.org.uk/psychologist/neurodiversity
             </Link>
-            ).
+            .
           </p>
 
           <p className='text-base dark:text-gray-300 text-gray-700 leading-relaxed'>
             Research and advocacy organisations including the National Autistic
             Society further reinforce that autistic cognition should be
-            understood through difference, not deficiency (
+            understood through difference, not deficiency{' '}
             <Link
               href='https://www.autism.org.uk/advice-and-guidance/what-is-autism/neurodiversity'
               target='_blank'
@@ -150,7 +153,7 @@ export default function page() {
             >
               https://www.autism.org.uk/advice-and-guidance/what-is-autism/neurodiversity
             </Link>
-            ).
+            .
           </p>
 
           <h4 className='text-xl font-semibold dark:text-white text-black pt-2'>
@@ -189,7 +192,7 @@ export default function page() {
             consistently shows that reducing extraneous cognitive load improves
             comprehension, retention, and persistence in learning. Clear
             explanations of this theory are widely published by cognitive
-            science educators such as Simply Psychology (
+            science educators such as Simply Psychology{' '}
             <Link
               href='https://www.simplypsychology.org/cognitive-load-theory.html'
               target='_blank'
@@ -197,9 +200,8 @@ export default function page() {
               className='text-primary underline block w-full whitespace-normal wrap-break-word break-all md:inline md:w-auto md:whitespace-nowrap md:break-normal'
             >
               https://www.simplypsychology.org/cognitive-load-theory.html
-            </Link>
-            ) and by research-led education groups like The Learning Scientists
-            (
+            </Link>{' '}
+            and by research-led education groups like The Learning Scientists{' '}
             <Link
               href='https://www.learningscientists.org/blog/2017/7/20/cognitive-load'
               target='_blank'
@@ -208,7 +210,7 @@ export default function page() {
             >
               https://www.learningscientists.org/blog/2017/7/20/cognitive-load
             </Link>
-            ).
+            .
           </p>
 
           <p className='text-base dark:text-gray-300 text-gray-700 leading-relaxed'>
@@ -248,7 +250,7 @@ export default function page() {
             Research into ADHD highlights differences in executive functioning,
             including task initiation, sustained attention, and time perception.
             These differences are widely recognised by institutions such as the
-            Centers for Disease Control and Prevention (CDC) (
+            Centers for Disease Control and Prevention (CDC){' '}
             <Link
               href='https://www.cdc.gov/adhd/features/executive-function.html'
               target='_blank'
@@ -256,10 +258,10 @@ export default function page() {
               className='text-primary underline block w-full whitespace-normal wrap-break-word break-all md:inline md:w-auto md:whitespace-nowrap md:break-normal'
             >
               https://www.cdc.gov/adhd/features/executive-function.html
-            </Link>
-            ) and education-focused organisations like Understood.org, which
+            </Link>{' '}
+            and education-focused organisations like Understood.org, which
             emphasise that executive function challenges are not a lack of
-            ability, but a difference in cognitive regulation (
+            ability, but a difference in cognitive regulation{' '}
             <Link
               href='https://www.understood.org/en/articles/executive-functioning-issues-what-you-need-to-know'
               target='_blank'
@@ -268,7 +270,7 @@ export default function page() {
             >
               https://www.understood.org/en/articles/executive-functioning-issues-what-you-need-to-know
             </Link>
-            ).
+            .
           </p>
 
           <p className='text-base dark:text-gray-300 text-gray-700 leading-relaxed'>
@@ -309,7 +311,7 @@ export default function page() {
             framework developed by CAST, which demonstrates that learning
             environments designed for diversity improve outcomes for all
             learners. UDL principles are widely adopted across education systems
-            and endorsed by global bodies focused on inclusive education (
+            and endorsed by global bodies focused on inclusive education{' '}
             <Link
               href='https://www.cast.org/impact/universal-design-for-learning-udl'
               target='_blank'
@@ -318,13 +320,13 @@ export default function page() {
             >
               https://www.cast.org/impact/universal-design-for-learning-udl
             </Link>
-            ).
+            .
           </p>
 
           <p className='text-base dark:text-gray-300 text-gray-700 leading-relaxed'>
             UNESCO’s work on inclusive education further reinforces that
             accessibility and flexibility are foundational to equitable learning
-            environments (
+            environments{' '}
             <Link
               href='https://www.unesco.org/en/inclusive-education'
               target='_blank'
@@ -333,7 +335,7 @@ export default function page() {
             >
               https://www.unesco.org/en/inclusive-education
             </Link>
-            ).
+            .
           </p>
 
           <h4 className='text-xl font-semibold dark:text-white text-black pt-2'>
@@ -367,7 +369,7 @@ export default function page() {
             Global labour market research increasingly shows a shift toward
             skills-based evaluation and lifelong learning. The World Economic
             Forum highlights that employers are placing greater value on
-            demonstrable skills rather than traditional credentials alone (
+            demonstrable skills rather than traditional credentials alone{' '}
             <Link
               href='https://www.weforum.org/reports/the-future-of-jobs-report-2025'
               target='_blank'
@@ -376,8 +378,8 @@ export default function page() {
             >
               https://www.weforum.org/reports/the-future-of-jobs-report-2025
             </Link>
-            ). Similarly, the OECD emphasises the importance of skills
-            development and adaptability in modern economies (
+            . Similarly, the OECD emphasises the importance of skills
+            development and adaptability in modern economies{' '}
             <Link
               href='https://www.oecd.org/skills/'
               target='_blank'
@@ -386,7 +388,7 @@ export default function page() {
             >
               https://www.oecd.org/skills/
             </Link>
-            ).
+            .
           </p>
 
           <p className='text-base dark:text-gray-300 text-gray-700 leading-relaxed'>
@@ -426,7 +428,7 @@ export default function page() {
             environments are predictable, respectful, and psychologically safe.
             UK-based bodies such as the Office for Students highlight the
             importance of inclusive design in improving outcomes for disabled
-            learners (
+            learners{' '}
             <Link
               href='https://www.officeforstudents.org.uk/advice-and-guidance/promoting-equal-opportunities/disability/'
               target='_blank'
@@ -435,7 +437,7 @@ export default function page() {
             >
               https://www.officeforstudents.org.uk/advice-and-guidance/promoting-equal-opportunities/disability/
             </Link>
-            ).
+            .
           </p>
 
           <h4 className='text-xl font-semibold dark:text-white text-black pt-2'>
@@ -687,11 +689,11 @@ export default function page() {
                   <div className='space-y-3 text-center transform transition-transform duration-300 hover:scale-105'>
                     <div className='flex justify-center'>
                       <div className='size-12 bg-primary/20 rounded-full flex items-center justify-center border-2 border-primary'>
-                        <div className='size-3 bg-primary rounded-full' />
+                        <Brain className='size-6 text-primary' />
                       </div>
                     </div>
                     <h3 className='text-white font-bold text-base'>
-                      Builts for different minds{' '}
+                      Built for different minds{' '}
                     </h3>
                     <p className='text-gray-400 text-sm'>
                       Designed for different ways of thinking, from the ground
@@ -702,7 +704,7 @@ export default function page() {
                   <div className='space-y-3 text-center transform transition-transform duration-300 hover:scale-105'>
                     <div className='flex justify-center'>
                       <div className='size-12 bg-primary/20 rounded-full flex items-center justify-center border-2 border-primary'>
-                        <div className='size-3 bg-primary rounded-full' />
+                        <MessageSquare className='size-6 text-primary' />
                       </div>
                     </div>
                     <h3 className='text-white font-bold text-base'>
@@ -717,11 +719,11 @@ export default function page() {
                   <div className='space-y-3 text-center transform transition-transform duration-300 hover:scale-105'>
                     <div className='flex justify-center'>
                       <div className='size-12 bg-primary/20 rounded-full flex items-center justify-center border-2 border-primary'>
-                        <div className='size-3 bg-primary rounded-full' />
+                        <Briefcase className='size-6 text-primary' />
                       </div>
                     </div>
                     <h3 className='text-white font-bold text-base'>
-                      Skills That Travel With You.
+                      Skills That Travel With You
                     </h3>
                     <p className='text-gray-400 text-sm'>
                       Skills that unlock real opportunities, recognised beyond
