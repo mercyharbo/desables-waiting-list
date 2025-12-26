@@ -40,7 +40,7 @@ export default function page() {
   return (
     <main className='w-full space-y-10 '>
       {/* Enhanced Hero Section */}
-      <section className='relative text-center bg-primary dark:bg-primary-alt 3xl:h-[70vh] 2xl:h-[70vh] xl:h-[70VH] lg:h-[70VH] md:h-[60vh] h-[90vh] overflow-hidden'>
+      <section className='relative text-center bg-primary dark:bg-primary-alt 3xl:h-[70vh] 2xl:h-[70vh] xl:h-[70VH] lg:h-[70VH] md:h-[60vh] xs:h-[90vh] overflow-hidden'>
         {/* Phone mockup (center bottom) */}
         <div className='absolute left-1/2 bottom-0 w-full md:w-auto mx-auto transform -translate-x-1/2 z-0 pointer-events-none'>
           <Image
